@@ -4,4 +4,5 @@ api/logs/
 .DS_Store
 Thumbs.db
 videos/*.mp4
+!videos/299527.mp4
 downloads/*.zip
