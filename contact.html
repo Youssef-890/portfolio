@@ -175,7 +175,7 @@
           <div class="form-card card">
             <h3 data-lang="en">Send a Message</h3>
             <h3 data-lang="fr">Envoyer un message</h3><h3 data-lang="es">Enviar un mensaje</h3>
-            <form id="contactForm" novalidate>
+            <form id="contactFormMail" novalidate>
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" data-lang="en">Your Name</label>
@@ -311,7 +311,7 @@
     // and bypass any stale cached submit handlers.
     document.addEventListener('DOMContentLoaded', function () {
       if (!/\.github\.io$/i.test(window.location.hostname)) return;
-      var form = document.getElementById('contactForm');
+      var form = document.getElementById('contactFormMail') || document.getElementById('contactForm');
       if (!form) return;
       form.addEventListener('submit', function (e) {
         e.preventDefault();
