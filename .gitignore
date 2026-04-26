@@ -1,0 +1,7 @@
+data/*.json
+api/logs/
+*.log
+.DS_Store
+Thumbs.db
+videos/*.mp4
+downloads/*.zip

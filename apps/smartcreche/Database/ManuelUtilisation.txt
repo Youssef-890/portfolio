@@ -1,0 +1,62 @@
+================================================================
+   SMARTCRECHE — MANUEL D'UTILISATION
+================================================================
+
+1. CONNEXION
+------------
+Au démarrage, saisissez votre identifiant et votre mot de passe.
+Identifiants par défaut :
+    • Nom d'utilisateur : admin
+    • Mot de passe      : admin123
+
+2. TABLEAU DE BORD
+------------------
+Affiche les indicateurs clés : nombre d'enfants inscrits,
+familles, absences du jour, factures impayées.
+
+3. MENU LATÉRAL (Sidebar)
+-------------------------
+    - Dashboard       : vue synthétique
+    - Enfants         : CRUD enfants (ajout/modif/suppression)
+    - Parents         : CRUD familles
+    - Catégories      : tranches d'âge
+    - Activités       : planning pédagogique
+    - Absences        : saisie & justification
+    - Facturation     : factures + paiements + PDF
+    - Rapports        : exports PDF / Excel
+    - Utilisateurs    : (Admin seulement)
+    - Paramètres      : (Admin seulement)
+    - À propos / Aide
+
+4. GESTION DES ENFANTS
+----------------------
+    • Bouton "Nouveau" pour créer un enfant.
+    • Sélectionnez un enfant dans la liste puis "Modifier".
+    • "Supprimer" demande une confirmation.
+    • Champ de recherche en temps réel.
+
+5. FACTURATION
+--------------
+    • Générer facture : crée une facture pour un parent
+      avec calcul auto (tarif mensuel × nb enfants du parent).
+    • Le statut est mis à jour automatiquement au fil
+      des paiements (Impayée → Partielle → Payée).
+    • Bouton "Exporter PDF" pour chaque facture.
+
+6. RAPPORTS
+-----------
+Choisissez le type de rapport (Présence, Activités, Factures)
+puis "Exporter PDF" ou "Exporter Excel".
+
+7. SÉCURITÉ
+-----------
+Les mots de passe sont hachés (SHA-256 + sel).
+Seul un administrateur peut gérer les utilisateurs.
+
+8. SAUVEGARDE
+-------------
+La base de données SQLite se trouve dans le dossier
+bin\Debug\Data\SmartCreche.db. Copiez ce fichier pour
+sauvegarder vos données.
+
+================================================================

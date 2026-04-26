@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Skills of Youssef El Amri — Technical skills, soft skills, certifications." />
+  <title>Skills — Youssef El Amri</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/global.css?v=6" />
+  <link rel="stylesheet" href="css/skills.css" />
+
+  <!-- Early theme/language to avoid flash of wrong UI -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme') || 'dark';
+        var l = localStorage.getItem('portfolio-lang')  || 'en';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('lang', l);
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.setAttribute('data-language', l);
+        });
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-language="en">
+  <div class="loader"><div class="loader-logo">YEA</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+  <div class="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--gradient-primary);z-index:9999;width:0;transition:width 0.1s;"></div>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">YEA<span>.</span></a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="skills.html" class="navbar-link active">Skills</a></li>
+        <li><a href="projects.html" class="navbar-link">Projects</a></li>
+        <li><a href="education.html" class="navbar-link">Education</a></li>
+        <li><a href="experience.html" class="navbar-link">Experience</a></li>
+        <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+        <li><a href="blog.html" class="navbar-link">Blog</a></li>
+        <li><a href="testimonials.html" class="navbar-link">Testimonials</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        <li><a href="achievements.html" class="navbar-link">Achievements</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="lang-toggle">FR</button>
+        <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+        <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+        <div class="navbar-hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar-mobile">
+    <a href="index.html" class="navbar-link">Home</a>
+    <a href="about.html" class="navbar-link">About</a>
+    <a href="skills.html" class="navbar-link active">Skills</a>
+    <a href="projects.html" class="navbar-link">Projects</a>
+    <a href="education.html" class="navbar-link">Education</a>
+    <a href="experience.html" class="navbar-link">Experience</a>
+    <a href="gallery.html" class="navbar-link">Gallery</a>
+    <a href="blog.html" class="navbar-link">Blog</a>
+    <a href="testimonials.html" class="navbar-link">Testimonials</a>
+    <a href="contact.html" class="navbar-link">Contact</a>
+    <a href="achievements.html" class="navbar-link">Achievements</a>
+    <div class="navbar-mobile-actions">
+      <button class="lang-toggle">FR</button>
+      <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="page-hero-tag" data-lang="en">What I Know</div>
+      <div class="page-hero-tag" data-lang="fr">Ce que je sais</div><div class="page-hero-tag" data-lang="es">Lo que sé</div>
+      <h1><span data-lang="en">My <span class="gradient-text">Skills</span></span><span data-lang="fr">Mes <span class="gradient-text">compétences</span></span><span data-lang="es">Mis <span class="gradient-text">habilidades</span></span></h1>
+      <p data-lang="en">A comprehensive overview of my technical expertise and soft skills</p>
+      <p data-lang="fr">Un aperçu complet de mon expertise technique et mes compétences personnelles</p><p data-lang="es">Una visión completa de mi experiencia técnica y mis habilidades personales</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Skills</span></div>
+    </div>
+  </section>
+
+  <section class="section tech-skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Technical Expertise</div>
+        <div class="section-tag" data-lang="fr">Expertise technique</div><div class="section-tag" data-lang="es">Experiencia técnica</div>
+        <h2 class="section-title"><span data-lang="en">Technical <span>Skills</span></span><span data-lang="fr">Compétences <span>techniques</span></span><span data-lang="es">Habilidades <span>técnicas</span></span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills-layout">
+        <div class="skills-bars" data-aos="fade-right">
+          <h3 class="skills-category-title" data-lang="en">Frontend</h3>
+          <h3 class="skills-category-title" data-lang="fr">Frontend</h3><h3 class="skills-category-title" data-lang="es">Frontend</h3>
+          <div class="progress-wrap"><div class="progress-label"><span>HTML</span><span class="progress-percent">95%</span></div><div class="progress-bar"><div class="progress-fill" data-width="95%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>CSS</span><span class="progress-percent">90%</span></div><div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>JavaScript</span><span class="progress-percent">82%</span></div><div class="progress-bar"><div class="progress-fill" data-width="82%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>Bootstrap</span><span class="progress-percent">88%</span></div><div class="progress-bar"><div class="progress-fill" data-width="88%"></div></div></div>
+
+          <h3 class="skills-category-title mt-4" data-lang="en">Backend &amp; Programming</h3>
+          <h3 class="skills-category-title mt-4" data-lang="fr">Backend &amp; Programmation</h3><h3 class="skills-category-title mt-4" data-lang="es">Backend y Programación</h3>
+          <div class="progress-wrap"><div class="progress-label"><span>PHP</span><span class="progress-percent">90%</span></div><div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>Laravel</span><span class="progress-percent">85%</span></div><div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>Java</span><span class="progress-percent">82%</span></div><div class="progress-bar"><div class="progress-fill" data-width="82%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>C#</span><span class="progress-percent">85%</span></div><div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>Visual Basic (VB)</span><span class="progress-percent">80%</span></div><div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>Python</span><span class="progress-percent">80%</span></div><div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div></div>
+          <div class="progress-wrap"><div class="progress-label"><span>SQL</span><span class="progress-percent">85%</span></div><div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div></div>
+        </div>
+
+        <div class="skills-icons" data-aos="fade-left">
+          <h3 class="skills-category-title" data-lang="en">Tools &amp; Technologies</h3>
+          <h3 class="skills-category-title" data-lang="fr">Outils et technologies</h3><h3 class="skills-category-title" data-lang="es">Herramientas y tecnologías</h3>
+          <div class="tech-icons-grid">
+            <div class="tech-icon-card"><i class="fab fa-html5" style="color:#e34f26"></i><span>HTML</span></div>
+            <div class="tech-icon-card"><i class="fab fa-css3-alt" style="color:#1572b6"></i><span>CSS</span></div>
+            <div class="tech-icon-card"><i class="fab fa-js" style="color:#f7df1e"></i><span>JavaScript</span></div>
+            <div class="tech-icon-card"><i class="fab fa-bootstrap" style="color:#7952b3"></i><span>Bootstrap</span></div>
+            <div class="tech-icon-card"><i class="fab fa-php" style="color:#777bb4"></i><span>PHP</span></div>
+            <div class="tech-icon-card"><i class="fab fa-laravel" style="color:#ff2d20"></i><span>Laravel</span></div>
+            <div class="tech-icon-card"><i class="fab fa-java" style="color:#f89820"></i><span>Java</span></div>
+            <div class="tech-icon-card"><i class="fas fa-hashtag" style="color:#9b4f96"></i><span>C#</span></div>
+            <div class="tech-icon-card"><i class="fab fa-microsoft" style="color:#00a4ef"></i><span>VB</span></div>
+            <div class="tech-icon-card"><i class="fab fa-python" style="color:#3776ab"></i><span>Python</span></div>
+            <div class="tech-icon-card"><i class="fas fa-database" style="color:#f29111"></i><span>SQL</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-skills bg-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">People Skills</div>
+        <div class="section-tag" data-lang="fr">Compétences relationnelles</div><div class="section-tag" data-lang="es">Habilidades interpersonales</div>
+        <h2 class="section-title"><span data-lang="en">Soft <span>Skills</span></span><span data-lang="fr">Compétences <span>personnelles</span></span><span data-lang="es">Habilidades <span>personales</span></span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="soft-skills-grid grid-3">
+        <div class="soft-skill-card card" data-aos="fade-up" data-aos-delay="0">
+          <div class="soft-skill-icon"><i class="fas fa-seedling"></i></div>
+          <div class="soft-skill-info">
+            <h4 data-lang="en">Autonomy &amp; responsibility</h4><h4 data-lang="fr">Autonomie &amp; sens des responsabilités</h4><h4 data-lang="es">Autonomía y responsabilidad</h4>
+            <p data-lang="en">Used to working independently on freelance and school projects, like on your CV.</p>
+            <p data-lang="fr">Autonomie développée sur des projets personnels et freelances (CV).</p><p data-lang="es">Autonomía en proyectos personales y académicos (CV).</p>
+            <div class="soft-skill-level"><div class="soft-skill-fill" style="width:92%"></div></div>
+          </div>
+        </div>
+        <div class="soft-skill-card card" data-aos="fade-up" data-aos-delay="100">
+          <div class="soft-skill-icon"><i class="fas fa-balance-scale"></i></div>
+          <div class="soft-skill-info">
+            <h4 data-lang="en">Rigor &amp; organization</h4><h4 data-lang="fr">Rigueur &amp; organisation</h4><h4 data-lang="es">Rigor y organización</h4>
+            <p data-lang="en">Following instructions carefully, writing maintainable code, and debugging as on the absence app project.</p>
+            <p data-lang="fr">Respect des procédures, code structuré, débogage et optimisation (projet d'absences).</p><p data-lang="es">Seguir consignas, código ordenado, depuración (proyecto de ausencias).</p>
+            <div class="soft-skill-level"><div class="soft-skill-fill" style="width:90%"></div></div>
+          </div>
+        </div>
+        <div class="soft-skill-card card" data-aos="fade-up" data-aos-delay="200">
+          <div class="soft-skill-icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="soft-skill-info">
+            <h4 data-lang="en">Initiative &amp; creativity</h4><h4 data-lang="fr">Force de proposition &amp; créativité</h4><h4 data-lang="es">Iniciativa y creatividad</h4>
+            <p data-lang="en">Proposing features and interface improvements on web and app projects.</p>
+            <p data-lang="fr">Idées d'amélioration d'interface et d'ergonomie (interfaces conviviales sur le CV).</p><p data-lang="es">Ideas de mejores interfaces y usabilidad (CV).</p>
+            <div class="soft-skill-level"><div class="soft-skill-fill" style="width:88%"></div></div>
+          </div>
+        </div>
+        <div class="soft-skill-card card" data-aos="fade-up" data-aos-delay="300">
+          <div class="soft-skill-icon"><i class="fas fa-clock"></i></div>
+          <div class="soft-skill-info">
+            <h4 data-lang="en">Time Management</h4><h4 data-lang="fr">Gestion du temps</h4><h4 data-lang="es">Gestión del tiempo</h4>
+            <p data-lang="en">Delivering projects on time through effective planning, prioritization, and focus.</p>
+            <p data-lang="fr">Livrer les projets dans les délais grâce à une planification et une prioritésation efficaces.</p><p data-lang="es">Entregar proyectos a tiempo gracias a una planificación y priorización eficaces.</p>
+            <div class="soft-skill-level"><div class="soft-skill-fill" style="width:88%"></div></div>
+          </div>
+        </div>
+        <div class="soft-skill-card card" data-aos="fade-up" data-aos-delay="400">
+          <div class="soft-skill-icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="soft-skill-info">
+            <h4 data-lang="en">Creativity</h4><h4 data-lang="fr">Créativité</h4><h4 data-lang="es">Creatividad</h4>
+            <p data-lang="en">Bringing fresh, innovative ideas to design and development challenges.</p>
+            <p data-lang="fr">Apporter des idées fraîches et innovantes aux défis de conception et développement.</p><p data-lang="es">Aportar ideas frescas e innovadoras a los desafíos de diseño y desarrollo.</p>
+            <div class="soft-skill-level"><div class="soft-skill-fill" style="width:93%"></div></div>
+          </div>
+        </div>
+        <div class="soft-skill-card card" data-aos="fade-up" data-aos-delay="500">
+          <div class="soft-skill-icon"><i class="fas fa-sync-alt"></i></div>
+          <div class="soft-skill-info">
+            <h4 data-lang="en">Adaptability</h4><h4 data-lang="fr">Adaptabilité</h4><h4 data-lang="es">Adaptabilidad</h4>
+            <p data-lang="en">Quickly adapting to new technologies, frameworks, and project requirements.</p>
+            <p data-lang="fr">M'adapter rapidement aux nouvelles technologies, frameworks et exigences des projets.</p><p data-lang="es">Adaptarme rápidamente a nuevas tecnologías, frameworks y requisitos de proyectos.</p>
+            <div class="soft-skill-level"><div class="soft-skill-fill" style="width:91%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section certifications">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Credentials</div>
+        <div class="section-tag" data-lang="fr">Diplômes</div><div class="section-tag" data-lang="es">Diplomas</div>
+        <h2 class="section-title"><span data-lang="en">Degrees &amp; <span>Certifications</span></span><span data-lang="fr">Diplômes &amp; <span>Certifications</span></span><span data-lang="es">Diplomas y <span>Certificaciones</span></span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="certs-grid grid-3">
+        <div class="cert-card card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cert-logo"><i class="fab fa-java" style="color:#f89820;font-size:2.5rem"></i></div>
+          <div class="cert-info">
+            <h4 data-lang="en">Advanced Java (2025)</h4>
+            <h4 data-lang="fr">Java avancé (2025)</h4>
+            <h4 data-lang="es">Java avanzado (2025)</h4>
+            <p data-lang="en">Personal projects and exercises (CV &amp; resume).</p>
+            <p data-lang="fr">Projets personnels et exercices (même intitulé sur le CV).</p>
+            <p data-lang="es">Proyectos y práctica (CV).</p>
+            <div class="cert-meta">
+              <span class="cert-date">2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cert-logo"><i class="fab fa-html5" style="color:#e34f26;font-size:2.5rem"></i></div>
+          <div class="cert-info">
+            <h4 data-lang="en">Web — HTML &amp; CSS3 (2024)</h4>
+            <h4 data-lang="fr">Développement web : HTML / CSS3 (2024)</h4>
+            <h4 data-lang="es">Desarrollo web HTML / CSS3 (2024)</h4>
+            <p data-lang="en">Self-study, personal and online work as listed on the CV.</p>
+            <p data-lang="fr">Autoformation, projets personnels (CV).</p>
+            <p data-lang="es">Autodidacta (CV).</p>
+            <div class="cert-meta">
+              <span class="cert-date">2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card card" data-aos="fade-up" data-aos-delay="200">
+          <div class="cert-logo"><i class="fas fa-code" style="color:var(--primary);font-size:2.5rem"></i></div>
+          <div class="cert-info">
+            <h4 data-lang="en">C &amp; MySQL (2023)</h4>
+            <h4 data-lang="fr">C &amp; MySQL (2023)</h4>
+            <h4 data-lang="es">C y MySQL (2023)</h4>
+            <p data-lang="en">App design, databases, and problem solving — as on the CV.</p>
+            <p data-lang="fr">Conception d'apps et BDD, résolution de problèmes (CV).</p>
+            <p data-lang="es">Apps y BDD (CV).</p>
+            <div class="cert-meta">
+              <span class="cert-date">2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card card" data-aos="fade-up" data-aos-delay="300">
+          <div class="cert-logo"><i class="fas fa-language" style="color:var(--accent);font-size:2.5rem"></i></div>
+          <div class="cert-info">
+            <h4 data-lang="en">English — self-study (2022 – 23)</h4>
+            <h4 data-lang="fr">Anglais — auto-apprentissage (2022 – 23)</h4>
+            <h4 data-lang="es">Inglés — autoaprendizaje (2022 – 23)</h4>
+            <p data-lang="en">Intermediate level, regular practice — same line as the CV “Langues”.</p>
+            <p data-lang="fr">Niveau intermédiaire, pratique régulière (CV).</p>
+            <p data-lang="es">Nivel intermedio, práctica (CV).</p>
+            <div class="cert-meta">
+              <span class="cert-date">2022 – 23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">YEA.</div>
+          <p data-lang="en">Web developer based in Tétouan, Morocco.</p>
+          <p data-lang="fr">Développeur web basé à Tétouan, Maroc.</p><p data-lang="es">Desarrollador web con base en Tétouan, Marruecos.</p>
+          <div class="footer-social">
+            <a href="https://github.com/Youssef-890" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/ysf12554" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/youssefElamri" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/youssef_elamri__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Quick Links</h4><h4 data-lang="fr">Liens rapides</h4><h4 data-lang="es">Enlaces rápidos</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">More Pages</h4><h4 data-lang="fr">Plus de pages</h4><h4 data-lang="es">Más páginas</h4>
+          <ul>
+            <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Contact</h4><h4 data-lang="fr">Contact</h4><h4 data-lang="es">Contacto</h4>
+          <ul>
+            <li><a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i> youssefelamri2004@gmail.com</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Tétouan, Maroc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> <span>Youssef El Amri</span>. Made with <span>♥</span> in Morocco.</p>
+        <div class="footer-bottom-links">
+          <a href="resume.html" data-lang="en">Resume</a>
+          <a href="resume.html" data-lang="fr">CV</a><a href="resume.html" data-lang="es">CV</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/global.js?v=8"></script>
+</body>
+</html>

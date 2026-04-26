@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Testimonials for Youssef El Amri — Client reviews and recommendations." />
+  <title>Testimonials — Youssef El Amri</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/global.css?v=6" />
+  <link rel="stylesheet" href="css/testimonials.css" />
+
+  <!-- Early theme/language to avoid flash of wrong UI -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme') || 'dark';
+        var l = localStorage.getItem('portfolio-lang')  || 'en';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('lang', l);
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.setAttribute('data-language', l);
+        });
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-language="en">
+  <div class="loader"><div class="loader-logo">YEA</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+  <div class="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--gradient-primary);z-index:9999;width:0;transition:width 0.1s;"></div>
+  
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">YEA<span>.</span></a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="skills.html" class="navbar-link">Skills</a></li>
+        <li><a href="projects.html" class="navbar-link">Projects</a></li>
+        <li><a href="education.html" class="navbar-link">Education</a></li>
+        <li><a href="experience.html" class="navbar-link">Experience</a></li>
+        <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+        <li><a href="blog.html" class="navbar-link">Blog</a></li>
+        <li><a href="testimonials.html" class="navbar-link active">Testimonials</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        <li><a href="achievements.html" class="navbar-link">Achievements</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="lang-toggle">FR</button>
+        <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+        <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+        <div class="navbar-hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar-mobile">
+    <a href="index.html" class="navbar-link">Home</a>
+    <a href="about.html" class="navbar-link">About</a>
+    <a href="skills.html" class="navbar-link">Skills</a>
+    <a href="projects.html" class="navbar-link">Projects</a>
+    <a href="education.html" class="navbar-link">Education</a>
+    <a href="experience.html" class="navbar-link">Experience</a>
+    <a href="gallery.html" class="navbar-link">Gallery</a>
+    <a href="blog.html" class="navbar-link">Blog</a>
+    <a href="testimonials.html" class="navbar-link active">Testimonials</a>
+    <a href="contact.html" class="navbar-link">Contact</a>
+    <a href="achievements.html" class="navbar-link">Achievements</a>
+    <div class="navbar-mobile-actions"><button class="lang-toggle">FR</button><button class="theme-toggle"><i class="fas fa-sun"></i></button></div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="page-hero-tag" data-lang="en">What People Say</div>
+      <div class="page-hero-tag" data-lang="fr">Ce que les gens disent</div><div class="page-hero-tag" data-lang="es">Lo que dice la gente</div>
+      
+      <h1><span data-lang="en">My <span class="gradient-text">Testimonials</span></span><span data-lang="fr">Mes <span class="gradient-text">Témoignages</span></span><span data-lang="es">Mis <span class="gradient-text">Testimonios</span></span></h1>
+      <p data-lang="en">Client reviews, recommendations, and feedback from collaborators</p>
+      <p data-lang="fr">Avis clients, recommandations et commentaires des collaborateurs</p><p data-lang="es">Reseñas de clientes, recomendaciones y comentarios de colaboradores</p>
+      
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Testimonials</span></div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Client Feedback</div>
+        <div class="section-tag" data-lang="fr">Avis clients</div><div class="section-tag" data-lang="es">Opiniones de clientes</div>
+        
+        <h2 class="section-title"><span data-lang="en">What People <span>Say</span></span><span data-lang="fr">Ce que les gens <span>disent</span></span><span data-lang="es">Lo que la gente <span>dice</span></span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle" data-lang="en">
+          Don't just take my word for it — hear from clients, colleagues, and collaborators who I've had the pleasure of working with.
+        </p>
+        <p class="section-subtitle" data-lang="fr">
+          Ne prenez pas seulement ma parole — écoutez les clients, collègues et collaborateurs avec qui j'ai eu le plaisir de travailler.
+        </p><p class="section-subtitle" data-lang="es">No solo confíes en mi palabra — escucha a clientes, colegas y colaboradores con los que he tenido el placer de trabajar.</p>
+        
+      </div>
+      
+      <!-- Swiper Testimonials -->
+      <div class="swiper testimonial-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-card card-glass">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text" data-lang="en">
+                "Youssef delivered an exceptional e-commerce platform that exceeded all our expectations.
+                His attention to detail and technical expertise are truly remarkable. He delivered on time and was always responsive to our feedback."
+              </p>
+              <p class="testimonial-text" data-lang="fr">
+                "Youssef a livré une plateforme e-commerce exceptionnelle qui a dépassé toutes nos attentes.
+                Son attention aux détails et son expertise technique sont vraiment remarquables. Il a livré dans les temps et a toujours été réactif à nos commentaires."
+              </p><p class="testimonial-text" data-lang="es">"Youssef entregó una plataforma de comercio electrónico excepcional que superó todas nuestras expectativas. Su atención al detalle y experiencia técnica son realmente notables. Entregó a tiempo y siempre estuvo receptivo a nuestros comentarios."</p>
+              
+              <div class="testimonial-author">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah&backgroundColor=b6e3f4" alt="Sarah Johnson" />
+                <div>
+                  <strong>Sarah Johnson</strong>
+                  <span>CEO, TechStart Inc.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card card-glass">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text" data-lang="en">
+                "Working with Youssef was a pleasure. He transformed our outdated website into a
+                modern, fast, and beautiful platform. Highly recommended for any web development project!"
+              </p>
+              <p class="testimonial-text" data-lang="fr">
+                "Travailler avec Youssef a été un plaisir. Il a transformé notre site obsolète en une
+                plateforme moderne, rapide et belle. Fortement recommandé pour tout projet de développement web!"
+              </p><p class="testimonial-text" data-lang="es">"Trabajar con Youssef fue un placer. Transformó nuestro sitio web desactualizado en una plataforma moderna, rápida y hermosa. ¡Altamente recomendado para cualquier proyecto de desarrollo web!"</p>
+              
+              <div class="testimonial-author">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmed&backgroundColor=c0aede" alt="Ahmed Benali" />
+                <div>
+                  <strong>Ahmed Benali</strong>
+                  <span>Product Manager, DataFlow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card card-glass">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="testimonial-text" data-lang="en">
+                "Youssef's UI/UX skills are outstanding. He designed an intuitive dashboard
+                that our team loves using every day. Great communicator and team player!"
+              </p>
+              <p class="testimonial-text" data-lang="fr">
+                "Les compétences UI/UX de Youssef sont exceptionnelles. Il a conçu un tableau de bord intuitif
+                que notre équipe adore utiliser chaque jour. Excellent communicateur et joueur d'équipe!"
+              </p><p class="testimonial-text" data-lang="es">"Las habilidades UI/UX de Youssef son excepcionales. Diseñó un panel intuitivo que a nuestro equipo le encanta usar todos los días. ¡Excelente comunicador y miembro del equipo!"</p>
+              
+              <div class="testimonial-author">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Marie&backgroundColor=ffd5dc" alt="Marie Dupont" />
+                <div>
+                  <strong>Marie Dupont</strong>
+                  <span>UX Lead, Creative Agency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card card-glass">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text" data-lang="en">
+                "Youssef built our mobile app from scratch and it exceeded expectations. His knowledge of React Native and Firebase is top-notch. Will definitely work with him again!"
+              </p>
+              <p class="testimonial-text" data-lang="fr">
+                "Youssef a construit notre application mobile from scratch et elle a dépassé les attentes. Sa connaissance de React Native et Firebase est excellente. Je travaillerai définitivement encore avec lui!"
+              </p><p class="testimonial-text" data-lang="es">"Youssef desarrolló nuestra aplicación móvil desde cero y superó las expectativas. Su conocimiento de React Native y Firebase es de primera. ¡Definitivamente volveré a trabajar con él!"</p>
+              
+              <div class="testimonial-author">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John&backgroundColor=c0aede" alt="John Smith" />
+                <div>
+                  <strong>John Smith</strong>
+                  <span>Founder, FitLife App</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card card-glass">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text" data-lang="en">
+                "Exceptional developer! Youssef understood our requirements perfectly and delivered a scalable backend solution. His code is clean and well-documented."
+              </p>
+              <p class="testimonial-text" data-lang="fr">
+                "Développeur exceptionnel! Youssef a parfaitement compris nos exigences et a livré une solution backend évolutive. Son code est propre et bien documenté."
+              </p><p class="testimonial-text" data-lang="es">"¡Desarrollador excepcional! Youssef entendió perfectamente nuestros requisitos y entregó una solución backend escalable. Su código es limpio y está bien documentado."</p>
+              
+              <div class="testimonial-author">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Lisa&backgroundColor=b6e3f4" alt="Lisa Wang" />
+                <div>
+                  <strong>Lisa Wang</strong>
+                  <span>CTO, CloudSync</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">YEA.</div>
+          <p data-lang="en">Web developer based in Tétouan, Morocco.</p>
+          <p data-lang="fr">Développeur web basé à Tétouan, Maroc.</p><p data-lang="es">Desarrollador web con base en Tétouan, Marruecos.</p>
+          
+          <div class="footer-social">
+            <a href="https://github.com/Youssef-890" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/ysf12554" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/youssefElamri" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/youssef_elamri__/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Quick Links</h4><h4 data-lang="fr">Liens rapides</h4><h4 data-lang="es">Enlaces rápidos</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">More Pages</h4><h4 data-lang="fr">Plus de pages</h4><h4 data-lang="es">Más páginas</h4>
+          <ul>
+            <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Contact</h4><h4 data-lang="fr">Contact</h4><h4 data-lang="es">Contacto</h4>
+          <ul>
+            <li><a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i> youssefelamri2004@gmail.com</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Tétouan, Maroc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> <span>Youssef El Amri</span>. Made with <span>♥</span> in Morocco.</p>
+        <div class="footer-bottom-links">
+          <a href="resume.html" data-lang="en">Resume</a>
+          <a href="resume.html" data-lang="fr">CV</a><a href="resume.html" data-lang="es">CV</a>
+          
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <button class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/global.js?v=8"></script>
+  <script src="js/testimonials.js"></script>
+</body>
+</html>

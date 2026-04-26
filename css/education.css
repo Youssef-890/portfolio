@@ -1,0 +1,221 @@
+/* ============================================================
+   EDUCATION PAGE CSS - Youssef El Amri Portfolio
+   ============================================================ */
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  border: 3px solid var(--bg-primary);
+  z-index: 1;
+}
+
+.timeline-content {
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  padding-right: 50px;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  padding-left: 50px;
+  margin-left: 50%;
+}
+
+/* ── Education Card ── */
+.edu-card {
+  padding: 30px;
+}
+
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.timeline-item:nth-child(odd) .edu-header {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) .edu-header {
+  flex-direction: row;
+}
+
+.edu-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(108, 99, 255, 0.15);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.edu-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edu-year {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.edu-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.edu-school {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.edu-card > p {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.edu-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.timeline-item:nth-child(odd) .edu-achievements {
+  justify-content: flex-end;
+}
+
+.edu-achievements span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.edu-achievements i {
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+
+/* ── Online Courses ── */
+.courses-grid {
+  margin-top: 20px;
+}
+
+.course-card {
+  padding: 24px;
+  position: relative;
+}
+
+.course-provider {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.course-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-right: 40px;
+}
+
+.course-card > p {
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-dot {
+    left: 20px;
+  }
+  
+  .timeline-content {
+    width: 100%;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+  
+  .edu-header {
+    flex-direction: row !important;
+  }
+  
+  .edu-achievements {
+    justify-content: flex-start !important;
+  }
+  
+  .course-provider {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-bottom: 12px;
+  }
+  
+  .course-card h4 {
+    padding-right: 0;
+  }
+}

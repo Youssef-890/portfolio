@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery of Youssef El Amri — Photos from events, travels, and work." />
+  <title>Gallery — Youssef El Amri</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" />
+  <link rel="stylesheet" href="css/global.css?v=6" />
+  <link rel="stylesheet" href="css/home.css?v=2" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-overlay span {
+      color: white;
+      font-size: 0.9rem;
+    }
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .filter-btn {
+      padding: 10px 24px;
+      border: 2px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--gradient-primary);
+      border-color: transparent;
+      color: white;
+    }
+  </style>
+
+  <!-- Early theme/language to avoid flash of wrong UI -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme') || 'dark';
+        var l = localStorage.getItem('portfolio-lang')  || 'en';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('lang', l);
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.setAttribute('data-language', l);
+        });
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-language="en">
+  <div class="loader"><div class="loader-logo">YEA</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+  <div class="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--gradient-primary);z-index:9999;width:0;transition:width 0.1s;"></div>
+  
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">YEA<span>.</span></a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="skills.html" class="navbar-link">Skills</a></li>
+        <li><a href="projects.html" class="navbar-link">Projects</a></li>
+        <li><a href="education.html" class="navbar-link">Education</a></li>
+        <li><a href="experience.html" class="navbar-link">Experience</a></li>
+        <li><a href="gallery.html" class="navbar-link active">Gallery</a></li>
+        <li><a href="blog.html" class="navbar-link">Blog</a></li>
+        <li><a href="testimonials.html" class="navbar-link">Testimonials</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        <li><a href="achievements.html" class="navbar-link">Achievements</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="lang-toggle">FR</button>
+        <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+        <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+        <div class="navbar-hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar-mobile">
+    <a href="index.html" class="navbar-link">🏠 Home</a><a href="about.html" class="navbar-link">👤 About</a>
+    <a href="skills.html" class="navbar-link">⚡ Skills</a><a href="projects.html" class="navbar-link">🚀 Projects</a>
+    <a href="education.html" class="navbar-link">🎓 Education</a><a href="experience.html" class="navbar-link">💼 Experience</a>
+    <a href="gallery.html" class="navbar-link active">🖼️ Gallery</a><a href="blog.html" class="navbar-link">📝 Blog</a>
+    <a href="testimonials.html" class="navbar-link">💬 Testimonials</a><a href="contact.html" class="navbar-link">📧 Contact</a>
+    <a href="achievements.html" class="navbar-link">🏆 Achievements</a>
+    <div class="navbar-mobile-actions"><button class="lang-toggle">FR</button><button class="theme-toggle"><i class="fas fa-sun"></i></button></div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="page-hero-tag" data-lang="en">My Memories</div>
+      <div class="page-hero-tag" data-lang="fr">Mes souvenirs</div><div class="page-hero-tag" data-lang="es">Mis recuerdos</div>
+      <h1><span data-lang="en">My <span class="gradient-text">Gallery</span></span><span data-lang="fr">Ma <span class="gradient-text">Galerie</span></span><span data-lang="es">Mi <span class="gradient-text">Galería</span></span></h1>
+      <p data-lang="en">Capturing moments from my journey around the world</p>
+      <p data-lang="fr">Capturer les moments de mon voyage autour du monde</p><p data-lang="es">Capturando los momentos de mi viaje por el mundo</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Gallery</span></div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="container">
+      <div class="filter-buttons" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all" data-lang="en">All</button>
+        <button class="filter-btn active" data-filter="all" data-lang="fr">Tout</button><button class="filter-btn active" data-filter="all" data-lang="es">Todo</button>
+        <button class="filter-btn" data-filter="travel" data-lang="en">Travel</button>
+        <button class="filter-btn" data-filter="travel" data-lang="fr">Voyage</button><button class="filter-btn" data-filter="travel" data-lang="es">Viaje</button>
+        <button class="filter-btn" data-filter="tech" data-lang="en">Tech Events</button>
+        <button class="filter-btn" data-filter="tech" data-lang="fr">Événements Tech</button><button class="filter-btn" data-filter="tech" data-lang="es">Eventos Tech</button>
+        <button class="filter-btn" data-filter="lifestyle" data-lang="en">Lifestyle</button>
+        <button class="filter-btn" data-filter="lifestyle" data-lang="fr">Style de vie</button><button class="filter-btn" data-filter="lifestyle" data-lang="es">Estilo de vida</button>
+      </div>
+      
+      <div class="gallery-grid">
+        <!-- Travel Photos -->
+        <div class="gallery-item" data-category="travel" data-aos="fade-up" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Morocco Mountains" />
+          <div class="gallery-overlay"><span data-lang="en">Atlas Mountains, Morocco</span><span data-lang="fr">Montagnes de l'Atlas, Maroc</span><span data-lang="es">Montañas del Atlas, Marruecos</span></div>
+        </div>
+        <div class="gallery-item" data-category="travel" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=600&q=80" alt="Moroccan Desert" />
+          <div class="gallery-overlay"><span data-lang="en">Moroccan Desert (Sahara)</span><span data-lang="fr">Désert marocain (Sahara)</span><span data-lang="es">Desierto marroquí (Sahara)</span></div>
+        </div>
+        <div class="gallery-item" data-category="travel" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan" />
+          <div class="gallery-overlay"><span data-lang="en">Tokyo, Japan</span><span data-lang="fr">Tokyo, Japon</span><span data-lang="es">Tokio, Japón</span></div>
+        </div>
+        <div class="gallery-item" data-category="travel" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80" alt="Venice" />
+          <div class="gallery-overlay"><span data-lang="en">Venice, Italy</span><span data-lang="fr">Venise, Italie</span><span data-lang="es">Venecia, Italia</span></div>
+        </div>
+        
+        <!-- Tech Events -->
+        <div class="gallery-item" data-category="tech" data-aos="fade-up" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Tech Conference" />
+          <div class="gallery-overlay"><span data-lang="en">Tétouan, Morocco</span><span data-lang="fr">Tétouan, Maroc</span><span data-lang="es">Tétouan, Marruecos</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Coding Workshop" />
+          <div class="gallery-overlay"><span data-lang="en">Dev Workshop</span><span data-lang="fr">Atelier Dev</span><span data-lang="es">Taller Dev</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80" alt="Hackathon" />
+          <div class="gallery-overlay"><span data-lang="en">Hackathon Winner</span><span data-lang="fr">Gagnant Hackathon</span><span data-lang="es">Ganador de Hackathon</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80" alt="Tech Meetup" />
+          <div class="gallery-overlay"><span data-lang="en">Community Meetup</span><span data-lang="fr">Rencontre Communauté</span><span data-lang="es">Encuentro Comunitario</span></div>
+        </div>
+        
+        <!-- Lifestyle -->
+        <div class="gallery-item" data-category="lifestyle" data-aos="fade-up" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&q=80" alt="Coffee" />
+          <div class="gallery-overlay"><span data-lang="en">Coffee Culture</span><span data-lang="fr">Culture du café</span><span data-lang="es">Cultura del café</span></div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Friends" />
+          <div class="gallery-overlay"><span data-lang="en">Team Building</span><span data-lang="fr">Team Building</span><span data-lang="es">Team Building</span></div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Meeting" />
+          <div class="gallery-overlay"><span data-lang="en">Collaboration</span><span data-lang="fr">Collaboration</span><span data-lang="es">Colaboración</span></div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&q=80" alt="Working" />
+          <div class="gallery-overlay"><span data-lang="en">Remote Work</span><span data-lang="fr">Télétravail</span><span data-lang="es">Teletrabajo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">YEA.</div>
+          <p data-lang="en">Web developer based in Tétouan, Morocco.</p>
+          <p data-lang="fr">Développeur web basé à Tétouan, Maroc.</p><p data-lang="es">Desarrollador web con base en Tétouan, Marruecos.</p>
+          <div class="footer-social">
+            <a href="https://github.com/Youssef-890" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/youssefElamri" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/youssefElamri" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/youssef_elamri__/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Quick Links</h4><h4 data-lang="fr">Liens rapides</h4><h4 data-lang="es">Enlaces rápidos</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">More Pages</h4><h4 data-lang="fr">Plus de pages</h4><h4 data-lang="es">Más páginas</h4>
+          <ul>
+            <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Contact</h4><h4 data-lang="fr">Contact</h4><h4 data-lang="es">Contacto</h4>
+          <ul>
+            <li><a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i> youssefelamri2004@gmail.com</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Tétouan, Morocco</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> <span>Youssef El Amri</span>. Made with <span>♥</span> in Morocco.</p>
+        <div class="footer-bottom-links">
+          <a href="resume.html" data-lang="en">Resume</a>
+          <a href="resume.html" data-lang="fr">CV</a><a href="resume.html" data-lang="es">CV</a>
+          <a href="contact.html" data-lang="en">Contact</a>
+          <a href="contact.html" data-lang="fr">Contact</a><a href="contact.html" data-lang="es">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <button class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/global.js?v=8"></script>
+  <script>
+    // Gallery filtering
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

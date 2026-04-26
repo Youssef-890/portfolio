@@ -1,0 +1,78 @@
+﻿================================================================
+  SmartCreche - Application de gestion de creche (garderie)
+  Projet VB.NET / Windows Forms - Version 1.0
+================================================================
+
+DEMARRAGE
+---------
+1. Decompressez entierement le fichier ZIP.
+2. Entrez dans le dossier "SmartCreche".
+3. Double-cliquez sur "SmartCreche.exe".
+
+Le runtime .NET 8 est DEJA INCLUS dans le dossier :
+aucune installation supplementaire n'est requise.
+
+La base de donnees SQLite (SmartCreche.db) est creee
+automatiquement au premier lancement, avec des donnees
+d'exemple (enfants, parents, categories, activites...).
+
+COMPTES DE CONNEXION
+--------------------
+Administrateur    -> admin       / admin123
+Educateur         -> educateur   / edu123
+Comptable         -> comptable   / cpt123
+
+FONCTIONNALITES
+---------------
+  [1]  Authentification securisee (SHA-256)
+  [2]  Tableau de bord avec indicateurs cles
+  [3]  Gestion des enfants (CRUD, photos, categories d'age)
+  [4]  Gestion des familles (parents, coordonnees)
+  [5]  Categories d'age (tranches)
+  [6]  Activites pedagogiques (attribution aux enfants)
+  [7]  Suivi des absences (avec justification)
+  [8]  Facturation automatique + paiements
+  [9]  Generation PDF des factures (PdfSharpCore)
+  [10] Rapports (presences, activites, factures) - export PDF et Excel
+  [11] Administration des utilisateurs (admin uniquement)
+  [12] Parametres generaux (nom creche, tarifs, devise)
+  [13] Page A Propos et Manuel d'utilisation integres
+
+ARCHITECTURE
+------------
+Application structuree en 3 couches (POO) :
+  - Couche UI        : Forms/ (Windows Forms)
+  - Couche Business  : Business/ (services metier)
+  - Couche DataAccess: DataAccess/ (ADO.NET + SQLite)
+
+Technologies utilisees :
+  - VB.NET sur .NET 8
+  - Windows Forms
+  - SQLite (System.Data.SQLite)
+  - PdfSharpCore pour les PDF
+  - ClosedXML pour les exports Excel
+
+CONTENU DU DOSSIER
+------------------
+  SmartCreche.exe              -> Executable principal
+  SmartCreche.dll              -> Logique de l'application
+  SmartCreche.dll.config       -> Configuration (connection string)
+  Database\                    -> Scripts SQL (schema + donnees demo)
+  *.dll                        -> Bibliotheques et runtime .NET 8
+  runtimes\                    -> Pilotes natifs (SQLite x64)
+
+PLATEFORME SUPPORTEE
+--------------------
+Windows 10 / 11 - 64 bits (x64)
+
+REMARQUES
+---------
+- Le fichier SmartCreche.db est cree a cote de l'executable.
+  Supprimez-le pour reinitialiser les donnees au prochain
+  demarrage.
+- Les fichiers PDF et Excel exportes sont enregistres a
+  l'emplacement que vous choisissez (dialogue de sauvegarde).
+
+================================================================
+  Projet academique - 2026
+================================================================

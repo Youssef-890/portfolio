@@ -1,0 +1,8 @@
+# Deny ALL web access to raw data files. These must only be read by PHP.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

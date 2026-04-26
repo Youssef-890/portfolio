@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects — Youssef El Amri's Portfolio" />
+  <title>Projects — Youssef El Amri</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/global.css?v=7" />
+  <link rel="stylesheet" href="css/home.css?v=2" />
+
+  <!-- Early theme/language to avoid flash of wrong UI -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme') || 'dark';
+        var l = localStorage.getItem('portfolio-lang')  || 'en';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('lang', l);
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.setAttribute('data-language', l);
+        });
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-language="en">
+
+  <div class="loader" id="loader">
+    <div class="loader-logo">YEA</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <div class="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--gradient-primary);z-index:9999;width:0;transition:width 0.1s;"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">YEA<span>.</span></a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="skills.html" class="navbar-link">Skills</a></li>
+        <li><a href="projects.html" class="navbar-link active">Projects</a></li>
+        <li><a href="education.html" class="navbar-link">Education</a></li>
+        <li><a href="experience.html" class="navbar-link">Experience</a></li>
+        <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+        <li><a href="blog.html" class="navbar-link">Blog</a></li>
+        <li><a href="testimonials.html" class="navbar-link">Testimonials</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        <li><a href="achievements.html" class="navbar-link">Achievements</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="lang-toggle" title="Toggle Language">EN</button>
+        <button class="theme-toggle" title="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+        <div class="navbar-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="navbar-mobile" id="mobileMenu">
+    <a href="index.html" class="navbar-link">Home</a>
+    <a href="about.html" class="navbar-link">About</a>
+    <a href="skills.html" class="navbar-link">Skills</a>
+    <a href="projects.html" class="navbar-link active">Projects</a>
+    <a href="education.html" class="navbar-link">Education</a>
+    <a href="experience.html" class="navbar-link">Experience</a>
+    <a href="gallery.html" class="navbar-link">Gallery</a>
+    <a href="blog.html" class="navbar-link">Blog</a>
+    <a href="testimonials.html" class="navbar-link">Testimonials</a>
+    <a href="contact.html" class="navbar-link">Contact</a>
+    <a href="achievements.html" class="navbar-link">Achievements</a>
+    <div class="navbar-mobile-actions">
+      <button class="lang-toggle">FR</button>
+      <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+      <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="blob blob-primary" style="width:500px;height:500px;top:-100px;left:-150px;"></div>
+    <div class="blob blob-accent" style="width:400px;height:400px;bottom:-100px;right:-100px;"></div>
+    <div class="container">
+      <div class="page-hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span data-lang="en">Portfolio</span>
+          <span data-lang="fr">Portfolio</span><span data-lang="es">Portafolio</span>
+        </div>
+        <h1 class="page-title">
+          <span data-lang="en">My <span class="gradient-text">Projects</span></span>
+          <span data-lang="fr">Mes <span class="gradient-text">Projets</span></span>
+          <span data-lang="es">Mis <span class="gradient-text">Proyectos</span></span>
+        </h1>
+        <p class="page-subtitle" data-lang="en">
+          Real projects built with passion and modern technologies
+        </p>
+        <p class="page-subtitle" data-lang="fr">
+          Projets réels construits avec passion et technologies modernes
+        </p><p class="page-subtitle" data-lang="es">Proyectos reales construidos con pasión y tecnologías modernas</p>
+        <div class="page-hero-breadcrumb">
+          <a href="index.html"><i class="fas fa-home"></i> <span data-lang="en">Home</span><span data-lang="fr">Accueil</span><span data-lang="es">Inicio</span></a>
+          <span><i class="fas fa-chevron-right"></i></span>
+          <span data-lang="en">Projects</span>
+          <span data-lang="fr">Projets</span><span data-lang="es">Proyectos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <nav class="project-filter-nav" data-aos="fade-up" aria-label="Filter projects by category">
+        <div class="filter filter--iconbar" role="tablist">
+          <button type="button" class="filter-btn filter-btn--icon active" data-filter="all" role="tab" aria-selected="true">
+            <span class="filter-btn-icon" aria-hidden="true"><i class="fas fa-th-large"></i></span>
+            <span class="filter-btn-label">
+              <span data-lang="en">All</span>
+              <span data-lang="fr">Tous</span>
+              <span data-lang="es">Todos</span>
+            </span>
+          </button>
+          <button type="button" class="filter-btn filter-btn--icon" data-filter="web" role="tab" aria-selected="false">
+            <span class="filter-btn-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+            <span class="filter-btn-label">
+              <span data-lang="en">Web</span>
+              <span data-lang="fr">Web</span>
+              <span data-lang="es">Web</span>
+            </span>
+          </button>
+          <button type="button" class="filter-btn filter-btn--icon" data-filter="mobile" role="tab" aria-selected="false">
+            <span class="filter-btn-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></span>
+            <span class="filter-btn-label">
+              <span data-lang="en">Mobile</span>
+              <span data-lang="fr">Mobile</span>
+              <span data-lang="es">Móvil</span>
+            </span>
+          </button>
+          <button type="button" class="filter-btn filter-btn--icon" data-filter="desktop" role="tab" aria-selected="false">
+            <span class="filter-btn-icon" aria-hidden="true"><i class="fas fa-desktop"></i></span>
+            <span class="filter-btn-label">
+              <span data-lang="en">Desktop</span>
+              <span data-lang="fr">Bureau</span>
+              <span data-lang="es">Escritorio</span>
+            </span>
+          </button>
+          <button type="button" class="filter-btn filter-btn--icon" data-filter="game" role="tab" aria-selected="false">
+            <span class="filter-btn-icon" aria-hidden="true"><i class="fas fa-gamepad"></i></span>
+            <span class="filter-btn-label">
+              <span data-lang="en">Games</span>
+              <span data-lang="fr">Jeux</span>
+              <span data-lang="es">Juegos</span>
+            </span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="projects-grid">
+        <!-- Project 1 — EduTrack -->
+        <div class="project-card project-card-launchable" data-category="web" data-launch-url="api/launch.php?app=edutrack" data-launch-mode="app" data-aos="fade-up" data-aos-delay="0" style="cursor:pointer;">
+          <div class="project-img">
+            <img src="img/edutrack-cover.png" alt="EduTrack — Student Management System" loading="lazy" />
+            <div class="project-overlay">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+            <span class="project-live-badge" title="App is running locally">
+              <i class="fas fa-circle"></i>
+              <span data-lang="en">Live</span>
+              <span data-lang="fr">En ligne</span>
+              <span data-lang="es">En vivo</span>
+            </span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="badge badge-primary">Laravel 12</span>
+              <span class="badge badge-accent">PHP 8.2</span>
+              <span class="badge badge-success">SQLite</span>
+              <span class="badge badge-warning">Blade</span>
+            </div>
+            <h3 data-lang="en">EduTrack — Student Management System</h3>
+            <h3 data-lang="fr">EduTrack — Système de gestion des étudiants</h3>
+            <h3 data-lang="es">EduTrack — Sistema de gestión de estudiantes</h3>
+            <p data-lang="en">
+              Laravel 12 web app built for Sup'ISI to manage students with a full CRUD. Includes user authentication (register / login / logout), protected routes, database, Blade templates and flash messages. Click the card to launch the app.
+            </p>
+            <p data-lang="fr">
+              Application web Laravel 12 développée pour Sup'ISI pour gérer les étudiants avec un CRUD complet. Inclut l'authentification (inscription / connexion / déconnexion), les routes protégées, la base de données, les vues Blade et les messages flash. Cliquez sur la carte pour lancer l'app.
+            </p>
+            <p data-lang="es">
+              Aplicación web Laravel 12 creada para Sup'ISI para gestionar estudiantes con un CRUD completo. Incluye autenticación (registro / inicio de sesión / cierre de sesión), rutas protegidas, base de datos, plantillas Blade y mensajes flash. Haz clic en la tarjeta para abrir la app.
+            </p>
+            <div class="project-links">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+              <button type="button" class="btn btn-danger btn-sm"
+                      data-video-src="videos/edutrack-demo.mp4"
+                      data-video-poster="img/edutrack-cover.png"
+                      data-video-title="EduTrack — Demo"
+                      onclick="event.stopPropagation();">
+                <i class="fas fa-play"></i> Video
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 — SmartCreche (Desktop, VB.NET / WinForms) -->
+        <div class="project-card project-card-launchable" data-category="desktop" data-launch-url="api/launch.php?app=smartcreche" data-launch-mode="app" data-aos="fade-up" data-aos-delay="100" style="cursor:pointer;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80" alt="SmartCreche — Daycare Management Application" />
+            <div class="project-overlay">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+            <span class="project-live-badge project-badge-desktop" title="Desktop application">
+              <i class="fas fa-desktop"></i>
+              <span data-lang="en">Desktop</span>
+              <span data-lang="fr">Bureau</span>
+              <span data-lang="es">Escritorio</span>
+            </span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="badge badge-primary">VB.NET</span>
+              <span class="badge badge-accent">.NET 8</span>
+              <span class="badge badge-success">WinForms</span>
+              <span class="badge badge-warning">SQLite</span>
+              <span class="badge badge-primary">PDF + Excel</span>
+            </div>
+            <h3 data-lang="en">SmartCreche — Daycare Management System</h3>
+            <h3 data-lang="fr">SmartCreche — Système de gestion de crèche</h3>
+            <h3 data-lang="es">SmartCreche — Sistema de gestión de guardería</h3>
+            <p data-lang="en">
+              Full VB.NET 8 Windows Forms desktop app for managing a daycare: secure SHA-256 login with 3 roles (admin, educator, accountant), dashboard, children &amp; families CRUD, activities, absences, automatic invoicing with PDF generation (PdfSharpCore), reports exported to PDF/Excel (ClosedXML), SQLite database and 3-tier architecture. Click the card to launch the app.
+            </p>
+            <p data-lang="fr">
+              Application desktop VB.NET 8 Windows Forms complète pour gérer une crèche : authentification SHA-256 à 3 rôles (admin, éducateur, comptable), tableau de bord, CRUD enfants &amp; familles, activités, absences, facturation automatique avec génération PDF (PdfSharpCore), rapports exportés en PDF/Excel (ClosedXML), base SQLite et architecture 3 couches. Cliquez sur la carte pour lancer l'app.
+            </p>
+            <p data-lang="es">
+              Aplicación de escritorio VB.NET 8 Windows Forms completa para gestionar una guardería: autenticación SHA-256 con 3 roles (admin, educador, contable), panel de control, CRUD de niños y familias, actividades, ausencias, facturación automática con generación PDF (PdfSharpCore), informes exportados a PDF/Excel (ClosedXML), base SQLite y arquitectura de 3 capas. Haz clic en la tarjeta para abrir la app.
+            </p>
+            <div class="project-links">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+              <a href="downloads/SmartCreche_v1.0.zip" download class="btn btn-outline btn-sm" onclick="event.stopPropagation();">
+                <i class="fas fa-download"></i>
+                <span data-lang="en">Download</span>
+                <span data-lang="fr">Télécharger</span>
+                <span data-lang="es">Descargar</span>
+              </a>
+              <button type="button" class="btn btn-danger btn-sm"
+                      data-video-src="videos/smartcreche-demo-20260425.mp4"
+                      data-video-poster="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1280&amp;q=85"
+                      data-video-title="SmartCreche — Demo"
+                      onclick="event.stopPropagation();">
+                <i class="fas fa-play"></i>
+                <span data-lang="en">Watch Demo</span>
+                <span data-lang="fr">Voir la démo</span>
+                <span data-lang="es">Ver demo</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 — Real Calculator PRO (Java Swing desktop) -->
+        <div class="project-card project-card-launchable" data-category="desktop" data-launch-url="api/launch.php?app=realcalc" data-launch-mode="app" data-aos="fade-up" data-aos-delay="200" style="cursor:pointer;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&q=80" alt="Real Calculator PRO — Java Swing desktop calculator" />
+            <div class="project-overlay">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+            <span class="project-live-badge project-badge-desktop" title="Desktop application">
+              <i class="fas fa-desktop"></i>
+              <span data-lang="en">Desktop</span>
+              <span data-lang="fr">Bureau</span>
+              <span data-lang="es">Escritorio</span>
+            </span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="badge badge-primary">Java 11+</span>
+              <span class="badge badge-accent">Swing</span>
+              <span class="badge badge-success">BigDecimal</span>
+              <span class="badge badge-warning">Zero deps</span>
+            </div>
+            <h3 data-lang="en">Real Calculator PRO — Premium Desktop Calculator</h3>
+            <h3 data-lang="fr">Real Calculator PRO — Calculatrice de bureau premium</h3>
+            <h3 data-lang="es">Real Calculator PRO — Calculadora de escritorio premium</h3>
+            <p data-lang="en">
+              Premium-feel Java Swing calculator with 3 themes (Dark / Light / Neon), persistent settings (JSON), clickable history side panel, button sound, full keyboard support and arbitrary-precision arithmetic via BigDecimal. Zero external dependencies. Click the card to launch it.
+            </p>
+            <p data-lang="fr">
+              Calculatrice Java Swing au feeling premium avec 3 thèmes (Dark / Light / Neon), paramètres persistants (JSON), panneau d'historique cliquable, son des boutons, support clavier complet et arithmétique de précision arbitraire via BigDecimal. Zéro dépendance externe. Cliquez sur la carte pour la lancer.
+            </p>
+            <p data-lang="es">
+              Calculadora Java Swing con acabado premium con 3 temas (Dark / Light / Neon), ajustes persistentes (JSON), panel de historial clickable, sonido de botones, soporte completo de teclado y aritmética de precisión arbitraria con BigDecimal. Cero dependencias externas. Haz clic en la tarjeta para lanzarla.
+            </p>
+            <div class="project-links">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+              <a href="downloads/RealCalculatorPro_v1.0.zip" download class="btn btn-outline btn-sm" onclick="event.stopPropagation();">
+                <i class="fas fa-download"></i>
+                <span data-lang="en">Download</span>
+                <span data-lang="fr">Télécharger</span>
+                <span data-lang="es">Descargar</span>
+              </a>
+              <a href="#" class="btn btn-danger btn-sm" onclick="event.stopPropagation();"><i class="fas fa-play"></i> Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 — CSharp Local Project -->
+        <div class="project-card project-card-launchable" data-category="desktop" data-launch-url="api/launch.php?app=csharp" data-launch-mode="app" data-aos="fade-up" data-aos-delay="300" style="cursor:pointer;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&q=80" alt="CSharp Local Project" loading="lazy" />
+            <div class="project-overlay">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+            <span class="project-live-badge project-badge-desktop" title="Desktop application">
+              <i class="fas fa-desktop"></i>
+              <span data-lang="en">Desktop</span>
+              <span data-lang="fr">Bureau</span>
+              <span data-lang="es">Escritorio</span>
+            </span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="badge badge-primary">C#</span>
+              <span class="badge badge-accent">.NET</span>
+              <span class="badge badge-success">Localhost</span>
+              <span class="badge badge-warning">D:\csharp</span>
+            </div>
+            <h3 data-lang="en">CSharp Local Project</h3>
+            <h3 data-lang="fr">Projet local CSharp</h3>
+            <h3 data-lang="es">Proyecto local CSharp</h3>
+            <p data-lang="en">
+              Local project launcher. Clicking this card starts the project from D:\csharp and opens localhost automatically.
+            </p>
+            <p data-lang="fr">
+              Lanceur de projet local. En cliquant sur cette carte, le projet démarre depuis D:\csharp et localhost s'ouvre automatiquement.
+            </p>
+            <p data-lang="es">
+              Lanzador de proyecto local. Al hacer clic en esta tarjeta, el proyecto inicia desde D:\csharp y abre localhost automáticamente.
+            </p>
+            <div class="project-links">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 — AssoManager (Laravel Web App) -->
+        <div class="project-card project-card-launchable" data-category="web" data-launch-url="api/launch.php?app=assomanager" data-launch-mode="app" data-aos="fade-up" data-aos-delay="400" style="cursor:pointer;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80" alt="AssoManager — Association Management Platform" loading="lazy" />
+            <div class="project-overlay">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+            <span class="project-live-badge" title="App is running locally">
+              <i class="fas fa-circle"></i>
+              <span data-lang="en">Live</span>
+              <span data-lang="fr">En ligne</span>
+              <span data-lang="es">En vivo</span>
+            </span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="badge badge-primary">Laravel</span>
+              <span class="badge badge-accent">PHP</span>
+              <span class="badge badge-success">MySQL / SQLite</span>
+              <span class="badge badge-warning">Localhost</span>
+            </div>
+            <h3 data-lang="en">AssoManager — Association Management Platform</h3>
+            <h3 data-lang="fr">AssoManager — Plateforme de gestion associative</h3>
+            <h3 data-lang="es">AssoManager — Plataforma de gestión de asociaciones</h3>
+            <p data-lang="en">
+              Laravel-based local web application to manage association operations. Click this card to start the project from D:\assoamanager1\assogestion-build and open it automatically on localhost.
+            </p>
+            <p data-lang="fr">
+              Application web locale basée sur Laravel pour gérer les opérations d'une association. Cliquez sur cette carte pour démarrer le projet depuis D:\assoamanager1\assogestion-build et l'ouvrir automatiquement sur localhost.
+            </p>
+            <p data-lang="es">
+              Aplicación web local basada en Laravel para gestionar las operaciones de una asociación. Haz clic en esta tarjeta para iniciar el proyecto desde D:\assoamanager1\assogestion-build y abrirlo automáticamente en localhost.
+            </p>
+            <div class="project-links">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+<a href="index.html" class="btn btn-outline btn-lg">
+          <i class="fas fa-arrow-left"></i>
+          <span data-lang="en">Back to Home</span>
+          <span data-lang="fr">Retour à l'accueil</span><span data-lang="es">Volver al inicio</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos="zoom-in">
+        <div class="cta-blob blob-primary" style="width:300px;height:300px;top:-50px;right:-50px;"></div>
+        <div class="cta-blob blob-accent" style="width:200px;height:200px;bottom:-30px;left:-30px;"></div>
+        <div class="section-tag" data-lang="en">Let's Work Together</div>
+        <div class="section-tag" data-lang="fr">Travaillons ensemble</div><div class="section-tag" data-lang="es">Trabajemos juntos</div>
+        <h2 data-lang="en">Have a Project in Mind?</h2>
+        <h2 data-lang="fr">Vous avez un projet en tête?</h2><h2 data-lang="es">¿Tienes un proyecto en mente?</h2>
+        <p data-lang="en">
+          I'm always open to discussing new projects, creative ideas, or opportunities
+          to be part of your vision. Let's build something amazing together!
+        </p>
+        <p data-lang="fr">
+          Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités
+          pour faire partie de votre vision. Construisons quelque chose d'incroyable ensemble!
+        </p><p data-lang="es">Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para formar parte de tu visión. ¡Construyamos algo increíble juntos!</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-paper-plane"></i>
+            <span data-lang="en">Start a Conversation</span>
+            <span data-lang="fr">Commencer la conversation</span><span data-lang="es">Iniciar la conversación</span>
+          </a>
+          <a href="resume.html" class="btn btn-outline btn-lg">
+            <i class="fas fa-file-alt"></i>
+            <span data-lang="en">View Resume</span>
+            <span data-lang="fr">Voir le CV</span><span data-lang="es">Ver el CV</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">YEA.</div>
+          <p data-lang="en">Web developer based in Tétouan, Morocco. Building digital experiences that matter.</p>
+          <p data-lang="fr">Développeur web basé à Tétouan, Maroc. Création d'expériences numériques qui comptent.</p><p data-lang="es">Desarrollador web con base en Tétouan, Marruecos. Creación de experiencias digitales que importan.</p>
+          <div class="footer-social">
+            <a href="https://github.com/Youssef-890" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/youssefElamri" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/youssefElamri" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/youssef_elamri__/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Quick Links</h4>
+          <h4 data-lang="fr">Liens rapides</h4><h4 data-lang="es">Enlaces rápidos</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">More Pages</h4>
+          <h4 data-lang="fr">Plus de pages</h4><h4 data-lang="es">Más páginas</h4>
+          <ul>
+            <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+            <li><a href="achievements.html"><i class="fas fa-chevron-right"></i> Achievements</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Contact</h4>
+          <h4 data-lang="fr">Contact</h4><h4 data-lang="es">Contacto</h4>
+          <ul>
+            <li><a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i> youssefelamri2004@gmail.com</a></li>
+            <li><a href="tel:+212632980466"><i class="fas fa-phone"></i> +212 632-980-466</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Tétouan, Morocco</a></li>
+            <li><a href="contact.html"><i class="fas fa-paper-plane"></i> Send Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> <span>Youssef El Amri</span>. Made with <span>♥</span> in Morocco.</p>
+        <div class="footer-bottom-links">
+          <a href="resume.html" data-lang="en">Resume</a>
+          <a href="resume.html" data-lang="fr">CV</a><a href="resume.html" data-lang="es">CV</a>
+          <a href="contact.html" data-lang="en">Contact</a>
+          <a href="contact.html" data-lang="fr">Contact</a><a href="contact.html" data-lang="es">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/global.js?v=9"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

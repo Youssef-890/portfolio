@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Youssef El Amri — Web developer, SUPISI Tétouan. Profil, formation et parcours alignés sur le CV." />
+  <title>About — Youssef El Amri</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/global.css?v=6" />
+  <link rel="stylesheet" href="css/about.css?v=3" />
+
+  <!-- Early theme/language to avoid flash of wrong UI -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme') || 'dark';
+        var l = localStorage.getItem('portfolio-lang')  || 'en';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('lang', l);
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.setAttribute('data-language', l);
+        });
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-language="en">
+  <div class="loader"><div class="loader-logo">YEA</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+  <div class="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--gradient-primary);z-index:9999;width:0;transition:width 0.1s;"></div>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">YEA<span>.</span></a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link active">About</a></li>
+        <li><a href="skills.html" class="navbar-link">Skills</a></li>
+        <li><a href="projects.html" class="navbar-link">Projects</a></li>
+        <li><a href="education.html" class="navbar-link">Education</a></li>
+        <li><a href="experience.html" class="navbar-link">Experience</a></li>
+        <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+        <li><a href="blog.html" class="navbar-link">Blog</a></li>
+        <li><a href="testimonials.html" class="navbar-link">Testimonials</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        <li><a href="achievements.html" class="navbar-link">Achievements</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="lang-toggle">FR</button>
+        <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+        <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+        <div class="navbar-hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar-mobile">
+    <a href="index.html" class="navbar-link">Home</a>
+    <a href="about.html" class="navbar-link active">About</a>
+    <a href="skills.html" class="navbar-link">Skills</a>
+    <a href="projects.html" class="navbar-link">Projects</a>
+    <a href="education.html" class="navbar-link">Education</a>
+    <a href="experience.html" class="navbar-link">Experience</a>
+    <a href="gallery.html" class="navbar-link">Gallery</a>
+    <a href="blog.html" class="navbar-link">Blog</a>
+    <a href="testimonials.html" class="navbar-link">Testimonials</a>
+    <a href="contact.html" class="navbar-link">Contact</a>
+    <a href="achievements.html" class="navbar-link">Achievements</a>
+    <div class="navbar-mobile-actions">
+      <button class="lang-toggle">FR</button>
+      <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="page-hero-tag" data-lang="en">About Me</div>
+      <div class="page-hero-tag" data-lang="fr">À propos</div>
+      <div class="page-hero-tag" data-lang="es">Sobre mí</div>
+      <h1>
+        <span data-lang="en">Get to Know <span class="gradient-text">Me Better</span></span>
+        <span data-lang="fr">Apprenez à <span class="gradient-text">me connaître</span></span>
+        <span data-lang="es">Conóceme <span class="gradient-text">mejor</span></span>
+      </h1>
+      <p data-lang="en">Developer, learner and problem-solver based in Tétouan, Morocco.</p>
+      <p data-lang="fr">Développeur, apprenant et résolveur de problèmes basé à Tétouan, Maroc.</p>
+      <p data-lang="es">Desarrollador, aprendiz y solucionador de problemas con base en Tétouan, Marruecos.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>About</span></div>
+    </div>
+  </section>
+
+  <!-- ===== BIO ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="bio-grid">
+        <div class="bio-img-wrapper" data-aos="fade-right">
+          <img src="img/youssef-elamri-profile.png" alt="Youssef El Amri" />
+          <div class="bio-img-decoration"></div>
+          <div class="bio-social">
+            <a href="https://github.com/Youssef-890" target="_blank" class="bio-social-btn"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/youssefElamri" target="_blank" rel="noopener noreferrer" class="bio-social-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://www.instagram.com/youssef_elamri__/" target="_blank" rel="noopener noreferrer" class="bio-social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="mailto:youssefelamri2004@gmail.com" class="bio-social-btn"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+        </div>
+
+        <div class="bio-text" data-aos="fade-left">
+          <div class="section-tag" data-lang="en">My Story</div>
+          <div class="section-tag" data-lang="fr">Mon histoire</div>
+          <div class="section-tag" data-lang="es">Mi historia</div>
+
+          <h2 class="section-title">
+            <span data-lang="en">Hi, I'm <span>Youssef</span></span>
+            <span data-lang="fr">Salut, je suis <span>Youssef</span></span>
+            <span data-lang="es">Hola, soy <span>Youssef</span></span>
+          </h2>
+
+          <p data-lang="en">
+            Passionate about building <strong>web applications</strong> and learning new technologies, I'm competent in
+            <strong>Java, C#, HTML/CSS, Visual Basic, PHP, JavaScript, and MySQL</strong> — the same focus as on my CV.
+            I'm studying at <strong>SUPISI (Tétouan)</strong> and looking for complementary training to go further.
+          </p>
+          <p data-lang="fr">
+            Développeur passionné par la création d'applications et les technologies web, compétent en
+            <strong>Java, C#, HTML/CSS, Visual Basic, PHP, JavaScript, MySQL</strong> (voir mon CV). J'étudie à
+            la <strong>SUPISI (Tétouan)</strong> et je souhaite intégrer une formation complémentaire pour
+            approfondir mes connaissances.
+          </p>
+          <p data-lang="es">
+            Apasionado por las aplicaciones y el desarrollo web, con competencias en
+            <strong>Java, C#, HTML/CSS, Visual Basic, PHP, JavaScript, MySQL</strong> (como en mi CV). Estudio en
+            <strong>SUPISI (Tétouan)</strong> y quiero formación complementaria.
+          </p>
+
+          <p data-lang="en">
+            <strong>Experience highlights:</strong> freelance web work in Tétouan
+            (<a href="https://www.youssef-dev-portfolio.com" target="_blank" rel="noopener">youssef-dev-portfolio.com</a>, 11/2023–05/2024);
+            an absence management app in Java / C in Al Hoceima (11/2022–11/2023); a 2023–2024 e-commerce (phone) project
+            in my portfolio. I also show EduTrack, SmartCreche, and Real Calculator PRO as academic / personal projects.
+          </p>
+          <p data-lang="fr">
+            <strong>Parcours :</strong> freelancing web à Tétouan (site vitrine, 11/2023–05/2024) ; application
+            d'absences (Java / C) à Al Hoceima ; projet e-commerce 2023–2024. Les projets EduTrack, SmartCreche et
+            Real Calculator illustrent aussi mon travail personnel et scolaire.
+          </p>
+          <p data-lang="es">
+            <strong>Experiencia:</strong> freelance web en Tétouan; app de ausencias (Java / C) en Al Hoceima; e-commerce
+            2023–2024. Proyectos del portfolio: EduTrack, SmartCreche, Real Calculator PRO.
+          </p>
+
+          <p data-lang="en">
+            This portfolio is available in English, French, and Spanish to reach more readers — but my CV’s language
+            section lists Arabic, French, and English.
+          </p>
+          <p data-lang="fr">
+            Ce site existe en 3 langues (EN/FR/ES) pour l'international ; le CV indique l'arabe, le français et l'anglais.
+          </p>
+          <p data-lang="es">
+            El sitio está en 3 idiomas; en el CV figuran árabe, francés e inglés.
+          </p>
+
+          <div class="bio-cta">
+            <a href="resume.html" class="btn btn-primary"><i class="fas fa-file-alt"></i>
+              <span data-lang="en">View Resume</span>
+              <span data-lang="fr">Voir le CV</span>
+              <span data-lang="es">Ver CV</span>
+            </a>
+            <a href="contact.html" class="btn btn-outline"><i class="fas fa-paper-plane"></i>
+              <span data-lang="en">Contact Me</span>
+              <span data-lang="fr">Me contacter</span>
+              <span data-lang="es">Contáctame</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERSONAL INFO ===== -->
+  <section class="section bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-lang="en">Quick Facts</div>
+        <div class="section-tag" data-lang="fr">En bref</div>
+        <div class="section-tag" data-lang="es">Datos rápidos</div>
+        <h2 class="section-title">
+          <span data-lang="en">Personal <span>Information</span></span>
+          <span data-lang="fr">Informations <span>personnelles</span></span>
+          <span data-lang="es">Información <span>personal</span></span>
+        </h2>
+      </div>
+
+      <div class="info-grid card" data-aos="fade-up">
+        <div class="info-card">
+          <div class="info-item">
+            <div class="info-label"><i class="fas fa-user"></i>
+              <span data-lang="en">Full Name</span>
+              <span data-lang="fr">Nom complet</span>
+              <span data-lang="es">Nombre completo</span>
+            </div>
+            <div class="info-value">Youssef El Amri</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label"><i class="fas fa-birthday-cake"></i>
+              <span data-lang="en">Date of Birth</span>
+              <span data-lang="fr">Date de naissance</span>
+              <span data-lang="es">Fecha de nacimiento</span>
+            </div>
+            <div class="info-value">26 / 09 / 2004</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label"><i class="fas fa-map-marker-alt"></i>
+              <span data-lang="en">Location</span>
+              <span data-lang="fr">Localisation</span>
+              <span data-lang="es">Ubicación</span>
+            </div>
+            <div class="info-value">
+              <span data-lang="en">Tétouan, Morocco</span>
+              <span data-lang="fr">Tétouan, Maroc</span>
+              <span data-lang="es">Tétouan, Marruecos</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-label"><i class="fas fa-graduation-cap"></i>
+              <span data-lang="en">Degree</span>
+              <span data-lang="fr">Diplôme</span>
+              <span data-lang="es">Titulación</span>
+            </div>
+            <div class="info-value">
+              <span data-lang="en">Diploma — software / app dev (in progress) — SUPISI</span>
+              <span data-lang="fr">Diplôme — informatique / dev. d'app. (en cours) — SUPISI</span>
+              <span data-lang="es">Diploma — informática (en curso) — SUPISI</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-label"><i class="fas fa-envelope"></i>Email</div>
+            <div class="info-value"><a href="mailto:youssefelamri2004@gmail.com" style="color:inherit;text-decoration:none;">youssefelamri2004@gmail.com</a></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label"><i class="fas fa-phone"></i>
+              <span data-lang="en">Phone</span>
+              <span data-lang="fr">Téléphone</span>
+              <span data-lang="es">Teléfono</span>
+            </div>
+            <div class="info-value"><a href="tel:+212632980466" style="color:inherit;">+212 632-980-466</a></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label"><i class="fas fa-language"></i>
+              <span data-lang="en">Languages</span>
+              <span data-lang="fr">Langues</span>
+              <span data-lang="es">Idiomas</span>
+            </div>
+            <div class="info-value">
+              <span data-lang="en">AR (native) · FR (B2) · EN (B1) — + ES on this site</span>
+              <span data-lang="fr">AR (natif) · FR (B2) · EN (B1) — + ES sur ce site</span>
+              <span data-lang="es">AR · FR (B2) · EN (B1) — ES en la web</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-label"><i class="fas fa-briefcase"></i>
+              <span data-lang="en">Status</span>
+              <span data-lang="fr">Statut</span>
+              <span data-lang="es">Estado</span>
+            </div>
+            <div class="info-value" style="color: var(--success); font-weight: 700;">
+              <span data-lang="en">Open to opportunities</span>
+              <span data-lang="fr">Ouvert aux opportunités</span>
+              <span data-lang="es">Abierto a oportunidades</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LANGUAGES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-lang="en">Languages</div>
+        <div class="section-tag" data-lang="fr">Langues</div>
+        <div class="section-tag" data-lang="es">Idiomas</div>
+        <h2 class="section-title">
+          <span data-lang="en">Languages <span>I Speak</span></span>
+          <span data-lang="fr">Langues que je <span>parle</span></span>
+          <span data-lang="es">Idiomas que <span>hablo</span></span>
+        </h2>
+      </div>
+
+      <div class="languages-grid">
+        <div class="language-card card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="lang-flag">🇲🇦</div>
+          <h3>
+            <span data-lang="en">Arabic</span>
+            <span data-lang="fr">Arabe</span>
+            <span data-lang="es">Árabe</span>
+          </h3>
+          <p data-lang="en">Native</p>
+          <p data-lang="fr">Langue maternelle</p>
+          <p data-lang="es">Lengua materna</p>
+        </div>
+        <div class="language-card card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="lang-flag">🇫🇷</div>
+          <h3>
+            <span data-lang="en">French</span>
+            <span data-lang="fr">Français</span>
+            <span data-lang="es">Francés</span>
+          </h3>
+          <p data-lang="en">Upper intermediate (B2) — CV</p>
+          <p data-lang="fr">Intermédiaire supérieur (B2) — CV</p>
+          <p data-lang="es">B2 (CV)</p>
+        </div>
+        <div class="language-card card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="lang-flag">🇬🇧</div>
+          <h3>
+            <span data-lang="en">English</span>
+            <span data-lang="fr">Anglais</span>
+            <span data-lang="es">Inglés</span>
+          </h3>
+          <p data-lang="en">Intermediate (B1) — CV</p>
+          <p data-lang="fr">Intermédiaire (B1) — CV</p>
+          <p data-lang="es">B1 (CV)</p>
+        </div>
+        <div class="language-card card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="lang-flag">🇪🇸</div>
+          <h3>
+            <span data-lang="en">Spanish (this portfolio)</span>
+            <span data-lang="fr">Espagnol (ce site)</span>
+            <span data-lang="es">Español (el sitio)</span>
+          </h3>
+          <p data-lang="en">Learning — site available in ES for visitors</p>
+          <p data-lang="fr">En apprentissage — version ES du site</p>
+          <p data-lang="es">Tercer idioma del portfolio</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOBBIES ===== -->
+  <section class="section bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-lang="en">Beyond Code</div>
+        <div class="section-tag" data-lang="fr">Au-delà du code</div>
+        <div class="section-tag" data-lang="es">Más allá del código</div>
+        <h2 class="section-title">
+          <span data-lang="en">Hobbies &amp; <span>Interests</span></span>
+          <span data-lang="fr">Loisirs &amp; <span>centres d'intérêt</span></span>
+          <span data-lang="es">Aficiones e <span>intereses</span></span>
+        </h2>
+      </div>
+
+      <div class="hobbies-grid">
+        <div class="hobby-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="hobby-icon">💻</div>
+          <h4>
+            <span data-lang="en">Side Projects</span>
+            <span data-lang="fr">Projets perso</span>
+            <span data-lang="es">Proyectos personales</span>
+          </h4>
+          <p data-lang="en">Building small apps to learn new tech.</p>
+          <p data-lang="fr">Créer des petites apps pour apprendre.</p>
+          <p data-lang="es">Crear pequeñas apps para aprender.</p>
+        </div>
+        <div class="hobby-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="hobby-icon">📚</div>
+          <h4>
+            <span data-lang="en">Reading</span>
+            <span data-lang="fr">Lecture</span>
+            <span data-lang="es">Lectura</span>
+          </h4>
+          <p data-lang="en">Tech blogs &amp; documentation.</p>
+          <p data-lang="fr">Blogs tech &amp; documentation.</p>
+          <p data-lang="es">Blogs de tecnología y documentación.</p>
+        </div>
+        <div class="hobby-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="hobby-icon">⚽</div>
+          <h4>
+            <span data-lang="en">Football</span>
+            <span data-lang="fr">Football</span>
+            <span data-lang="es">Fútbol</span>
+          </h4>
+          <p data-lang="en">Watching matches &amp; weekend games.</p>
+          <p data-lang="fr">Regarder les matchs &amp; jouer le week-end.</p>
+          <p data-lang="es">Ver partidos y jugar los fines de semana.</p>
+        </div>
+        <div class="hobby-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="hobby-icon">🎮</div>
+          <h4>
+            <span data-lang="en">Gaming</span>
+            <span data-lang="fr">Jeux vidéo</span>
+            <span data-lang="es">Videojuegos</span>
+          </h4>
+          <p data-lang="en">Strategy &amp; puzzle games.</p>
+          <p data-lang="fr">Jeux de stratégie et puzzles.</p>
+          <p data-lang="es">Juegos de estrategia y puzzles.</p>
+        </div>
+        <div class="hobby-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="hobby-icon">🎵</div>
+          <h4>
+            <span data-lang="en">Music</span>
+            <span data-lang="fr">Musique</span>
+            <span data-lang="es">Música</span>
+          </h4>
+          <p data-lang="en">Lo-fi while coding.</p>
+          <p data-lang="fr">Lo-fi en codant.</p>
+          <p data-lang="es">Lo-fi mientras programo.</p>
+        </div>
+        <div class="hobby-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="hobby-icon">✈️</div>
+          <h4>
+            <span data-lang="en">Travel</span>
+            <span data-lang="fr">Voyages</span>
+            <span data-lang="es">Viajes</span>
+          </h4>
+          <p data-lang="en">Discovering Morocco &amp; beyond.</p>
+          <p data-lang="fr">Découvrir le Maroc &amp; au-delà.</p>
+          <p data-lang="es">Descubrir Marruecos y más allá.</p>
+        </div>
+        <div class="hobby-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="hobby-icon">🍳</div>
+          <h4>
+            <span data-lang="en">Cooking</span>
+            <span data-lang="fr">Cuisine</span>
+            <span data-lang="es">Cocina</span>
+          </h4>
+          <p data-lang="en">Trying new recipes on weekends.</p>
+          <p data-lang="fr">Tester de nouvelles recettes le week-end.</p>
+          <p data-lang="es">Probar recetas nuevas los fines de semana.</p>
+        </div>
+        <div class="hobby-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="hobby-icon">📷</div>
+          <h4>
+            <span data-lang="en">Photography</span>
+            <span data-lang="fr">Photographie</span>
+            <span data-lang="es">Fotografía</span>
+          </h4>
+          <p data-lang="en">Capturing daily moments.</p>
+          <p data-lang="fr">Capturer les moments du quotidien.</p>
+          <p data-lang="es">Capturar momentos cotidianos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALUES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-lang="en">What I Believe</div>
+        <div class="section-tag" data-lang="fr">Ce en quoi je crois</div>
+        <div class="section-tag" data-lang="es">En lo que creo</div>
+        <h2 class="section-title">
+          <span data-lang="en">My <span>Values</span></span>
+          <span data-lang="fr">Mes <span>valeurs</span></span>
+          <span data-lang="es">Mis <span>valores</span></span>
+        </h2>
+      </div>
+
+      <div class="row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+        <div class="value-card card" data-aos="fade-up" data-aos-delay="0">
+          <div class="hobby-icon">🎯</div>
+          <h4>
+            <span data-lang="en">Keep Learning</span>
+            <span data-lang="fr">Continuer à apprendre</span>
+            <span data-lang="es">Seguir aprendiendo</span>
+          </h4>
+          <p data-lang="en">Tech moves fast. I read docs, watch tutorials and ship side projects every week.</p>
+          <p data-lang="fr">La tech évolue vite. Je lis la doc, regarde des tutos et livre des projets perso chaque semaine.</p>
+          <p data-lang="es">La tecnología avanza rápido. Leo documentación, veo tutoriales y publico proyectos cada semana.</p>
+        </div>
+        <div class="value-card card" data-aos="fade-up" data-aos-delay="100">
+          <div class="hobby-icon">🤝</div>
+          <h4>
+            <span data-lang="en">Honest Work</span>
+            <span data-lang="fr">Travail honnête</span>
+            <span data-lang="es">Trabajo honesto</span>
+          </h4>
+          <p data-lang="en">Estimates I can defend, code I can explain, and bugs I admit before someone finds them.</p>
+          <p data-lang="fr">Des estimations que je peux défendre, du code que je peux expliquer et des bugs que j'avoue.</p>
+          <p data-lang="es">Estimaciones defendibles, código que puedo explicar y bugs que admito antes que los descubran.</p>
+        </div>
+        <div class="value-card card" data-aos="fade-up" data-aos-delay="200">
+          <div class="hobby-icon">⚡</div>
+          <h4>
+            <span data-lang="en">Ship Real Things</span>
+            <span data-lang="fr">Livrer du concret</span>
+            <span data-lang="es">Entregar cosas reales</span>
+          </h4>
+          <p data-lang="en">A working prototype beats a 50-page plan. EduTrack, SmartCreche and Real Calculator PRO all started small.</p>
+          <p data-lang="fr">Un prototype qui marche vaut mieux qu'un plan de 50 pages. EduTrack, SmartCreche et Real Calculator PRO ont commencé petits.</p>
+          <p data-lang="es">Un prototipo que funciona vale más que un plan de 50 páginas. EduTrack, SmartCreche y Real Calculator PRO empezaron pequeños.</p>
+        </div>
+        <div class="value-card card" data-aos="fade-up" data-aos-delay="300">
+          <div class="hobby-icon">💡</div>
+          <h4>
+            <span data-lang="en">Stay Curious</span>
+            <span data-lang="fr">Rester curieux</span>
+            <span data-lang="es">Mantener la curiosidad</span>
+          </h4>
+          <p data-lang="en">From PHP to Java Swing to VB.NET — I follow the project, not the trend.</p>
+          <p data-lang="fr">De PHP à Java Swing en passant par VB.NET — je suis le projet, pas la mode.</p>
+          <p data-lang="es">De PHP a Java Swing pasando por VB.NET — sigo el proyecto, no la moda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUN FACTS ===== -->
+  <section class="section bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-lang="en">Fun Facts</div>
+        <div class="section-tag" data-lang="fr">Le saviez-vous</div>
+        <div class="section-tag" data-lang="es">Curiosidades</div>
+        <h2 class="section-title">
+          <span data-lang="en">Some <span>Numbers</span></span>
+          <span data-lang="fr">Quelques <span>chiffres</span></span>
+          <span data-lang="es">Algunos <span>números</span></span>
+        </h2>
+      </div>
+
+      <div class="row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;">
+        <div class="fact-card card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="fact-emoji">☕</div>
+          <div class="fact-number">2K+</div>
+          <p data-lang="en">Cups of coffee &amp; tea</p>
+          <p data-lang="fr">Tasses de café et thé</p>
+          <p data-lang="es">Tazas de café y té</p>
+        </div>
+        <div class="fact-card card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="fact-emoji">⌨️</div>
+          <div class="fact-number">10+</div>
+          <p data-lang="en">Languages I code in</p>
+          <p data-lang="fr">Langages que j'utilise</p>
+          <p data-lang="es">Lenguajes que uso</p>
+        </div>
+        <div class="fact-card card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="fact-emoji">🚀</div>
+          <div class="fact-number">3</div>
+          <p data-lang="en">Featured projects shipped</p>
+          <p data-lang="fr">Projets phares livrés</p>
+          <p data-lang="es">Proyectos destacados publicados</p>
+        </div>
+        <div class="fact-card card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="fact-emoji">🌍</div>
+          <div class="fact-number">4</div>
+          <p data-lang="en">Spoken languages</p>
+          <p data-lang="fr">Langues parlées</p>
+          <p data-lang="es">Idiomas hablados</p>
+        </div>
+        <div class="fact-card card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="fact-emoji">🐛</div>
+          <div class="fact-number">∞</div>
+          <p data-lang="en">Bugs squashed</p>
+          <p data-lang="fr">Bugs écrasés</p>
+          <p data-lang="es">Bugs corregidos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos="zoom-in">
+        <div class="cta-blob blob-primary" style="width:300px;height:300px;top:-50px;right:-50px;"></div>
+        <div class="cta-blob blob-accent" style="width:200px;height:200px;bottom:-30px;left:-30px;"></div>
+        <div class="section-tag" data-lang="en">Let's Talk</div>
+        <div class="section-tag" data-lang="fr">Discutons</div>
+        <div class="section-tag" data-lang="es">Hablemos</div>
+        <h2 data-lang="en">Want to <span class="gradient-text">work together</span>?</h2>
+        <h2 data-lang="fr">Envie de <span class="gradient-text">collaborer</span>?</h2>
+        <h2 data-lang="es">¿Quieres <span class="gradient-text">colaborar</span>?</h2>
+        <p data-lang="en">I'm open to internships, freelance projects and full-time opportunities.</p>
+        <p data-lang="fr">Je suis ouvert aux stages, projets freelance et postes à temps plein.</p>
+        <p data-lang="es">Estoy abierto a prácticas, proyectos freelance y oportunidades a tiempo completo.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i>
+            <span data-lang="en">Get in Touch</span>
+            <span data-lang="fr">Me contacter</span>
+            <span data-lang="es">Contáctame</span>
+          </a>
+          <a href="projects.html" class="btn btn-outline btn-lg"><i class="fas fa-rocket"></i>
+            <span data-lang="en">See Projects</span>
+            <span data-lang="fr">Voir les projets</span>
+            <span data-lang="es">Ver proyectos</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">YEA.</div>
+          <p data-lang="en">Web developer &amp; software student (SUPISI) — Tétouan, Morocco.</p>
+          <p data-lang="fr">Développeur web &amp; étudiant (SUPISI) — Tétouan, Maroc.</p>
+          <p data-lang="es">Desarrollador web y estudiante (SUPISI) — Tétouan, Marruecos.</p>
+          <div class="footer-social">
+            <a href="https://github.com/Youssef-890" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/youssefElamri" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/youssefElamri" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/youssef_elamri__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Quick Links</h4><h4 data-lang="fr">Liens rapides</h4><h4 data-lang="es">Enlaces rápidos</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">More Pages</h4><h4 data-lang="fr">Plus de pages</h4><h4 data-lang="es">Más páginas</h4>
+          <ul>
+            <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Contact</h4><h4 data-lang="fr">Contact</h4><h4 data-lang="es">Contacto</h4>
+          <ul>
+            <li><a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i> youssefelamri2004@gmail.com</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Tétouan, Maroc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> <span>Youssef El Amri</span>. Made with <span>♥</span> in Morocco.</p>
+        <div class="footer-bottom-links">
+          <a href="resume.html" data-lang="en">Resume</a>
+          <a href="resume.html" data-lang="fr">CV</a><a href="resume.html" data-lang="es">CV</a>
+          <a href="contact.html" data-lang="en">Contact</a>
+          <a href="contact.html" data-lang="fr">Contact</a><a href="contact.html" data-lang="es">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/global.js?v=8"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+/* ============================================================
+   ABOUT PAGE CSS - Youssef El Amri Portfolio
+   ============================================================ */
+
+/* ── Bio Section ── */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.bio-img-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+}
+
+.bio-img-wrapper img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 8%;
+  border-radius: var(--border-radius-xl);
+  border: 3px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.bio-img-decoration {
+  position: absolute;
+  bottom: -10px; right: -10px;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  opacity: 0.3;
+  filter: blur(20px);
+}
+
+.bio-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.bio-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.bio-social-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateX(6px);
+}
+
+.bio-social-btn i { color: inherit; font-size: 1rem; }
+
+.bio-text { display: flex; flex-direction: column; gap: 16px; }
+.bio-text p { font-size: 0.97rem; }
+
+.bio-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+/* ── Personal Info ── */
+.info-grid { max-width: 900px; margin: 0 auto; }
+
+.info-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 20px;
+  transition: var(--transition);
+}
+
+.info-item:nth-child(odd) { border-right: 1px solid var(--border-color); }
+.info-item:last-child, .info-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+
+.info-item:hover { background: rgba(108, 99, 255, 0.05); }
+
+.info-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.info-label i { color: var(--primary); font-size: 0.9rem; }
+
+.info-value {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+/* ── Languages ── */
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.language-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-flag { font-size: 3rem; line-height: 1; }
+.language-card h3 { font-size: 1.1rem; font-weight: 700; }
+
+/* ── Hobbies ── */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.hobby-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary);
+}
+
+.hobby-icon { font-size: 2.5rem; line-height: 1; }
+.hobby-card h4 { font-size: 1rem; font-weight: 700; }
+.hobby-card p { font-size: 0.85rem; color: var(--text-muted); }
+
+/* ── Values ── */
+.value-card { display: flex; flex-direction: column; gap: 14px; }
+.value-card h4 { font-size: 1.05rem; font-weight: 700; }
+
+/* ── Photo Gallery ── */
+.about-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img { transform: scale(1.08); }
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(108, 99, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+/* ── Fun Facts ── */
+.fact-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 36px 20px;
+}
+
+.fact-emoji { font-size: 2.5rem; }
+
+.fact-number {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.fact-card p { font-size: 0.9rem; color: var(--text-secondary); font-weight: 500; }
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+  .bio-img-wrapper img { height: 300px; }
+  .languages-grid { grid-template-columns: repeat(2, 1fr); }
+  .hobbies-grid { grid-template-columns: repeat(2, 1fr); }
+  .info-card { grid-template-columns: 1fr; }
+  .info-item:nth-child(odd) { border-right: none; }
+}
+
+@media (max-width: 768px) {
+  .about-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .hobbies-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .languages-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-gallery-grid { grid-template-columns: 1fr; }
+  .bio-social { flex-direction: row; flex-wrap: wrap; }
+}

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CV de Youssef El Amri — Développeur web, étudiant SUPISI (Tétouan)." />
+  <title>Resume — Youssef El Amri</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/global.css?v=6" />
+  <style>
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .resume-header {
+      background: var(--gradient-primary);
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .resume-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .resume-header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .resume-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+    .resume-section-title {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .resume-section-title i {
+      color: var(--primary);
+    }
+    .resume-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .resume-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .resume-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--bg-alt);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .resume-content h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    .resume-content .company {
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .resume-content .date {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+    .resume-content ul {
+      margin-left: 20px;
+    }
+    .resume-content li {
+      margin-bottom: 5px;
+      color: var(--text-secondary);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .skill-item {
+      background: var(--bg-alt);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .skill-item i {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact-item i {
+      color: var(--primary);
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      background: var(--gradient-primary);
+      color: white;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: transform 0.3s ease;
+    }
+    .download-btn:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+
+  <!-- Early theme/language to avoid flash of wrong UI -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme') || 'dark';
+        var l = localStorage.getItem('portfolio-lang')  || 'en';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('lang', l);
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.setAttribute('data-language', l);
+        });
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-language="en">
+  <div class="loader"><div class="loader-logo">YEA</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+  <div class="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--gradient-primary);z-index:9999;width:0;transition:width 0.1s;"></div>
+  
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">YEA<span>.</span></a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="skills.html" class="navbar-link">Skills</a></li>
+        <li><a href="projects.html" class="navbar-link">Projects</a></li>
+        <li><a href="education.html" class="navbar-link">Education</a></li>
+        <li><a href="experience.html" class="navbar-link">Experience</a></li>
+        <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+        <li><a href="blog.html" class="navbar-link">Blog</a></li>
+        <li><a href="testimonials.html" class="navbar-link">Testimonials</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        <li><a href="achievements.html" class="navbar-link">Achievements</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="lang-toggle">FR</button>
+        <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+        <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+        <div class="navbar-hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar-mobile">
+    <a href="index.html" class="navbar-link">🏠 Home</a><a href="about.html" class="navbar-link">👤 About</a>
+    <a href="skills.html" class="navbar-link">⚡ Skills</a><a href="projects.html" class="navbar-link">🚀 Projects</a>
+    <a href="education.html" class="navbar-link">🎓 Education</a><a href="experience.html" class="navbar-link">💼 Experience</a>
+    <a href="gallery.html" class="navbar-link">🖼️ Gallery</a><a href="blog.html" class="navbar-link">📝 Blog</a>
+    <a href="testimonials.html" class="navbar-link">💬 Testimonials</a><a href="contact.html" class="navbar-link">📧 Contact</a>
+    <a href="achievements.html" class="navbar-link">🏆 Achievements</a>
+    <div class="navbar-mobile-actions"><button class="lang-toggle">FR</button><button class="theme-toggle"><i class="fas fa-sun"></i></button></div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="page-hero-tag" data-lang="en">My CV</div>
+      <div class="page-hero-tag" data-lang="fr">Mon CV</div><div class="page-hero-tag" data-lang="es">Mi CV</div>
+      <h1><span data-lang="en">My <span class="gradient-text">Resume</span></span><span data-lang="fr">Mon <span class="gradient-text">CV</span></span><span data-lang="es">Mi <span class="gradient-text">CV</span></span></h1>
+      <p data-lang="en">Download my resume or view it online</p>
+      <p data-lang="fr">Téléchargez mon CV ou consultez-le en ligne</p><p data-lang="es">Descarga mi CV o consúltalo en línea</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Resume</span></div>
+    </div>
+  </section>
+
+  <!-- Resume Content -->
+  <section class="section">
+    <div class="container">
+      <div class="resume-container">
+        
+        <!-- Header -->
+        <div class="resume-header" data-aos="fade-up">
+          <h1>Youssef El Amri</h1>
+          <p data-lang="en">Web developer</p>
+          <p data-lang="fr">Développeur web</p><p data-lang="es">Desarrollador web</p>
+          <div class="contact-info-grid" style="margin-top: 20px; justify-content: center;">
+            <div class="contact-item"><i class="fas fa-envelope"></i> youssefelamri2004@gmail.com</div>
+            <div class="contact-item"><i class="fas fa-phone"></i> +212 632-980-466</div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> <span data-lang="en">Tétouan, Morocco</span><span data-lang="fr">Tétouan, Maroc</span><span data-lang="es">Tétouan, Marruecos</span></div>
+            <div class="contact-item"><i class="fas fa-link"></i> <a href="https://www.youssef-dev-portfolio.com" target="_blank" rel="noopener" style="color:inherit;">youssef-dev-portfolio.com</a></div>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="resume-section" data-aos="fade-up">
+          <h3 class="resume-section-title"><i class="fas fa-user"></i> <span data-lang="en">Profile</span><span data-lang="fr">Profil</span><span data-lang="es">Perfil</span></h3>
+          <p data-lang="en">
+            Passionate developer who enjoys building web applications and learning new technologies. Proficient in
+            Java, C#, HTML/CSS, Visual Basic, PHP, JavaScript and MySQL. Motivated by technical challenges and
+            by contributing to solid software projects.
+          </p>
+          <p data-lang="fr">
+            Développeur passionné par la création d'applications et les technologies web, compétent en Java, C#,
+            HTML/CSS et Visual Basic. Motivé à relever des défis techniques et à contribuer à des projets innovants
+            dans le développement logiciel.
+          </p>
+          <p data-lang="es">
+            Apasionado por crear aplicaciones y aprender tecnologías web, con competencias en Java, C#, HTML/CSS y
+            Visual Basic. Motivado por retos técnicos y por aportar a proyectos de software sólidos.
+          </p>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="resume-section" data-aos="fade-up">
+          <h3 class="resume-section-title"><i class="fas fa-briefcase"></i> <span data-lang="en">Experience</span><span data-lang="fr">Expérience</span><span data-lang="es">Experiencia</span></h3>
+          
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">Web development (freelance) — Tétouan</h4>
+              <h4 data-lang="fr">Développement web (freelance) — Tétouan</h4><h4 data-lang="es">Desarrollo web (freelance) — Tétouan</h4>
+              <div class="company">youssef-dev-portfolio.com</div>
+              <div class="date">11/2023 – 05/2024</div>
+              <ul>
+                <li data-lang="en">Web interfaces: front and back; user data management in the database</li>
+                <li data-lang="fr">Développement d'interfaces web, front et back. Gestion de la base de données des informations utilisateurs</li>
+                <li data-lang="es">Interfaces web front y back. Gestión de la base de datos de usuarios</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fas fa-clipboard-list"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">Absence management app (Java / C) — Al Hoceima</h4>
+              <h4 data-lang="fr">Application de gestion d'absences (Java / C) — Al Hoceima</h4><h4 data-lang="es">App de ausencias (Java / C) — Al Hoceima</h4>
+              <div class="company">Freelance — Al Hoceima</div>
+              <div class="date">11/2022 – 11/2023</div>
+              <ul>
+                <li data-lang="en">Friendly UIs, absence tracking, monthly reports, debugging and optimization</li>
+                <li data-lang="fr">Interfaces conviviales, suivi des absences, rapports mensuels, débogage et optimisation</li>
+                <li data-lang="es">Interfaz amigable, seguimiento de ausencias, informes, depuración y optimización</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fas fa-shopping-bag"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">E-commerce: phone sales website</h4>
+              <h4 data-lang="fr">E-commerce : site de vente de téléphones</h4><h4 data-lang="es">E-commerce: venta de móviles</h4>
+              <div class="company">
+                <span data-lang="en">Personal project</span>
+                <span data-lang="fr">Projet personnel</span>
+                <span data-lang="es">Proyecto personal</span>
+              </div>
+              <div class="date">2023 – 2024</div>
+              <ul>
+                <li data-lang="en">End-to-end web project to practice e-commerce and full stack skills</li>
+                <li data-lang="fr">Projet web complet pour pratiquer l'e-commerce et le développement</li>
+                <li data-lang="es">Proyecto web completo para practicar e-commerce y desarrollo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="resume-section" data-aos="fade-up">
+          <h3 class="resume-section-title"><i class="fas fa-graduation-cap"></i> <span data-lang="en">Education</span><span data-lang="fr">Formation</span><span data-lang="es">Formación</span></h3>
+          
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fas fa-university"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">Diploma — Computer science / application development (in progress)</h4>
+              <h4 data-lang="fr">Diplôme — Informatique / développement d'application (en cours)</h4>
+              <h4 data-lang="es">Diploma — Informática / desarrollo de aplicaciones (en curso)</h4>
+              <div class="company">SUPISI, Tétouan</div>
+              <div class="date">10/2023 – present</div>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fas fa-language"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">Baccalaureate — English track (online course)</h4>
+              <h4 data-lang="fr">Baccalauréat — filière anglais (cours en ligne, Tétouan)</h4>
+              <h4 data-lang="es">Bachillerato — rama inglés (curso en línea, Tétouan)</h4>
+              <div class="company">Cours en ligne — Tétouan</div>
+              <div class="date">11/2022 – 09/2023</div>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fas fa-school"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">Baccalaureate — Physical sciences</h4>
+              <h4 data-lang="fr">Baccalauréat — Sciences physiques</h4>
+              <h4 data-lang="es">Bachillerato — Ciencias físicas</h4>
+              <div class="company">Lycée Charif El Idrissi, Tétouan</div>
+              <div class="date">09/2020 – 06/2022</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="resume-section" data-aos="fade-up">
+          <h3 class="resume-section-title"><i class="fas fa-code"></i> <span data-lang="en">Technical Skills</span><span data-lang="fr">Compétences techniques</span><span data-lang="es">Habilidades técnicas</span></h3>
+          <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-html5"></i><div>HTML</div></div>
+            <div class="skill-item"><i class="fab fa-css3-alt"></i><div>CSS</div></div>
+            <div class="skill-item"><i class="fab fa-js"></i><div>JavaScript</div></div>
+            <div class="skill-item"><i class="fab fa-php"></i><div>PHP</div></div>
+            <div class="skill-item"><i class="fab fa-laravel"></i><div>Laravel</div></div>
+            <div class="skill-item"><i class="fab fa-java"></i><div>Java</div></div>
+            <div class="skill-item"><i class="fas fa-hashtag"></i><div>C#</div></div>
+            <div class="skill-item"><i class="fab fa-microsoft"></i><div>Visual Basic</div></div>
+            <div class="skill-item"><i class="fab fa-python"></i><div>Python</div></div>
+            <div class="skill-item"><i class="fas fa-database"></i><div>MySQL / SQL</div></div>
+            <div class="skill-item"><i class="fas fa-file-powerpoint"></i><div>PowerPoint</div></div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="resume-section" data-aos="fade-up">
+          <h3 class="resume-section-title"><i class="fas fa-certificate"></i> <span data-lang="en">Certificates &amp; training</span><span data-lang="fr">Certificats &amp; formations</span><span data-lang="es">Certificados y formación</span></h3>
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fab fa-java"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">Advanced Java — personal projects &amp; practice</h4>
+              <h4 data-lang="fr">Java avancé — projets personnels &amp; exercices</h4>
+              <h4 data-lang="es">Java avanzado — proyectos y práctica</h4>
+              <div class="date">2025</div>
+            </div>
+          </div>
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fab fa-html5"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">Web development: HTML / CSS3</h4>
+              <h4 data-lang="fr">Développement web : HTML / CSS3</h4>
+              <h4 data-lang="es">Desarrollo web: HTML / CSS3</h4>
+              <div class="date">2024</div>
+            </div>
+          </div>
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fas fa-code"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">C, MySQL — app design &amp; problem solving</h4>
+              <h4 data-lang="fr">Programmation C &amp; MySQL</h4>
+              <h4 data-lang="es">C, MySQL</h4>
+              <div class="date">2023</div>
+            </div>
+          </div>
+          <div class="resume-item">
+            <div class="resume-icon"><i class="fas fa-language"></i></div>
+            <div class="resume-content">
+              <h4 data-lang="en">English — self-study (intermediate)</h4>
+              <h4 data-lang="fr">Anglais — auto-apprentissage (niveau intermédiaire)</h4>
+              <h4 data-lang="es">Inglés — autoaprendizaje (intermedio)</h4>
+              <div class="date">2022 – 2023</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Button -->
+        <div style="text-align: center;" data-aos="fade-up">
+          <a href="assets/resume/resume.jpg" download class="download-btn">
+            <i class="fas fa-download"></i>
+            <span data-lang="en">Download Resume</span>
+            <span data-lang="fr">Télécharger le CV</span><span data-lang="es">Descargar el CV</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">YEA.</div>
+          <p data-lang="en">Web developer based in Tétouan, Morocco.</p>
+          <p data-lang="fr">Développeur web basé à Tétouan, Maroc.</p><p data-lang="es">Desarrollador web con base en Tétouan, Marruecos.</p>
+          <div class="footer-social">
+            <a href="https://github.com/Youssef-890" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/youssefElamri" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/youssefElamri" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/youssef_elamri__/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Quick Links</h4><h4 data-lang="fr">Liens rapides</h4><h4 data-lang="es">Enlaces rápidos</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">More Pages</h4><h4 data-lang="fr">Plus de pages</h4><h4 data-lang="es">Más páginas</h4>
+          <ul>
+            <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Contact</h4><h4 data-lang="fr">Contact</h4><h4 data-lang="es">Contacto</h4>
+          <ul>
+            <li><a href="mailto:youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i> youssefelamri2004@gmail.com</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Tétouan, Morocco</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> <span>Youssef El Amri</span>. Made with <span>♥</span> in Morocco.</p>
+        <div class="footer-bottom-links">
+          <a href="resume.html" data-lang="en">Resume</a>
+          <a href="resume.html" data-lang="fr">CV</a><a href="resume.html" data-lang="es">CV</a>
+          <a href="contact.html" data-lang="en">Contact</a>
+          <a href="contact.html" data-lang="fr">Contact</a><a href="contact.html" data-lang="es">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <button class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/global.js?v=8"></script>
+</body>
+</html>

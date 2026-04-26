@@ -1,0 +1,1168 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Youssef El Amri — Web developer, student at SUPISI (Tétouan). Java, C#, HTML/CSS, VB, PHP, MySQL." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#6c63ff" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Youssef El Amri — Portfolio" />
+  <meta property="og:description" content="Web developer portfolio: web apps, desktop apps, Laravel, Java, C#, and project demos." />
+  <meta property="og:image" content="img/edutrack-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Youssef El Amri — Portfolio" />
+  <meta name="twitter:description" content="Web developer portfolio with real projects and live demos." />
+  <meta name="twitter:image" content="img/edutrack-cover.png" />
+  <title>Youssef El Amri — Portfolio</title>
+  <link rel="canonical" href="index.html" />
+
+  <!-- Favicon (inline emoji) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Fonts & 3rd-party CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/global.css?v=6" />
+  <link rel="stylesheet" href="css/home.css?v=3" />
+
+  <!-- Early theme/language to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme') || 'dark';
+        var l = localStorage.getItem('portfolio-lang')  || 'en';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('lang', l);
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.setAttribute('data-language', l);
+        });
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-language="en">
+
+  <!-- ===== LOADER ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">YEA</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div class="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--gradient-primary);z-index:9999;width:0;transition:width 0.1s linear;"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">YEA<span>.</span></a>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link active">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="skills.html" class="navbar-link">Skills</a></li>
+        <li><a href="projects.html" class="navbar-link">Projects</a></li>
+        <li><a href="experience.html" class="navbar-link">Experience</a></li>
+        <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+        <li><a href="blog.html" class="navbar-link">Blog</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button class="cmd-hint-btn" onclick="openPalette()" title="Open command palette">
+          <i class="fas fa-search"></i>
+          <span class="kbd">Ctrl</span><span class="kbd">K</span>
+        </button>
+        <button class="lang-toggle" title="Toggle Language" aria-label="Toggle Language">FR</button>
+        <button class="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+        <div class="navbar-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="navbar-mobile" id="mobileMenu">
+    <a href="index.html" class="navbar-link active">Home</a>
+    <a href="about.html" class="navbar-link">About</a>
+    <a href="skills.html" class="navbar-link">Skills</a>
+    <a href="projects.html" class="navbar-link">Projects</a>
+    <a href="education.html" class="navbar-link">Education</a>
+    <a href="experience.html" class="navbar-link">Experience</a>
+    <a href="gallery.html" class="navbar-link">Gallery</a>
+    <a href="blog.html" class="navbar-link">Blog</a>
+    <a href="testimonials.html" class="navbar-link">Testimonials</a>
+    <a href="contact.html" class="navbar-link">Contact</a>
+    <a href="achievements.html" class="navbar-link">Achievements</a>
+    <div class="navbar-mobile-actions">
+      <button class="lang-toggle">FR</button>
+      <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+      <a href="resume.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Resume</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero mesh-bg scroll-zoom-scene" id="hero">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="none" poster="img/edutrack-cover.png" aria-hidden="true">
+      <source src="videos/299527.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+    <canvas id="particles-canvas"></canvas>
+    <div class="blob blob-primary" style="width:500px;height:500px;top:-100px;left:-150px;"></div>
+    <div class="blob blob-accent" style="width:400px;height:400px;bottom:-100px;right:-100px;"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span data-lang="en">Available for Work</span>
+            <span data-lang="fr">Disponible pour travailler</span>
+            <span data-lang="es">Disponible para trabajar</span>
+          </div>
+
+          <h1 class="hero-name">
+            <span data-lang="en">Hi, I'm <br/><span class="gradient-text">Youssef El Amri</span></span>
+            <span data-lang="fr">Bonjour, je suis <br/><span class="gradient-text">Youssef El Amri</span></span>
+            <span data-lang="es">¡Hola, soy <br/><span class="gradient-text">Youssef El Amri</span></span>
+          </h1>
+
+          <div class="hero-typing">
+            <span data-lang="en">I'm a </span>
+            <span data-lang="fr">Je suis </span>
+            <span data-lang="es">Soy </span>
+            <span class="typing-text" data-words='["Web developer","Développeur web","Desarrollador web","Java &amp; PHP dev"]'></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-desc" data-lang="en">
+            I love building real web and desktop projects with Java, C#, HTML/CSS, Visual Basic, PHP, JavaScript
+            and MySQL. Student at <strong>SUPISI (Tétouan)</strong>, motivated by new challenges in software
+            and web development.
+          </p>
+          <p class="hero-desc" data-lang="fr">
+            Développeur passionné par la création d'applications et les technologies web, compétent en Java, C#,
+            HTML/CSS et Visual Basic. <strong>Étudiant à la SUPISI (Tétouan)</strong>, motivé par les défis
+            techniques et par des projets concrets.
+          </p>
+          <p class="hero-desc" data-lang="es">
+            Me gusta programar con Java, C#, HTML/CSS, Visual Basic, PHP, JavaScript y MySQL. <strong>Estudiante
+            en la SUPISI (Tétouan)</strong>, con ganas de seguir aprendiendo y construir proyectos reales.
+          </p>
+
+          <div class="hero-cta">
+            <a href="projects.html" class="btn btn-primary btn-lg">
+              <i class="fas fa-rocket"></i>
+              <span data-lang="en">View My Work</span>
+              <span data-lang="fr">Voir mes projets</span>
+              <span data-lang="es">Ver mi trabajo</span>
+            </a>
+            <a href="contact.html" class="btn btn-outline btn-lg">
+              <i class="fas fa-paper-plane"></i>
+              <span data-lang="en">Hire Me</span>
+              <span data-lang="fr">Engagez-moi</span>
+              <span data-lang="es">Contrátame</span>
+            </a>
+            <a href="assets/resume/resume.jpg" download class="btn btn-ghost btn-lg">
+              <i class="fas fa-download"></i>
+              <span data-lang="en">Download CV</span>
+              <span data-lang="fr">Télécharger CV</span>
+              <span data-lang="es">Descargar CV</span>
+            </a>
+          </div>
+
+          <div class="hero-social">
+            <a href="https://github.com/Youssef-890" target="_blank" rel="noopener" class="hero-social-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/youssefElamri" target="_blank" rel="noopener" class="hero-social-link" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/youssefElamri" target="_blank" rel="noopener" class="hero-social-link" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/youssef_elamri__/" target="_blank" rel="noopener noreferrer" class="hero-social-link" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" data-copy="youssefelamri2004@gmail.com" class="hero-social-link" data-tooltip="Copy email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="hero-img-wrapper">
+            <div class="hero-img-ring"></div>
+            <div class="hero-img-container">
+              <img class="hero-img" src="img/youssef-elamri-profile.png" width="400" height="400" alt="Youssef El Amri" fetchpriority="high" />
+            </div>
+            <div class="hero-float-badge badge-1"><i class="fas fa-code"></i><span>Web &amp; apps</span></div>
+            <div class="hero-float-badge badge-2"><i class="fas fa-graduation-cap"></i><span>SUPISI</span></div>
+            <div class="hero-float-badge badge-3"><i class="fas fa-map-marker-alt"></i><span>Tétouan</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <a href="#stats" class="hero-scroll-btn">
+          <span data-lang="en">Scroll Down</span>
+          <span data-lang="fr">Défiler vers le bas</span>
+          <span data-lang="es">Desliza hacia abajo</span>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-icon"><i class="fas fa-code"></i></div>
+          <div class="stat-number"><span class="counter" data-target="3">0</span>+</div>
+          <div class="stat-label" data-lang="en">Featured projects</div>
+          <div class="stat-label" data-lang="fr">Projets mis en avant</div>
+          <div class="stat-label" data-lang="es">Proyectos destacados</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="stat-number"><span class="counter" data-target="2">0</span>+</div>
+          <div class="stat-label" data-lang="en">Freelance experiences</div>
+          <div class="stat-label" data-lang="fr">Expériences freelance</div>
+          <div class="stat-label" data-lang="es">Experiencias freelance</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-icon"><i class="fas fa-eye"></i></div>
+          <div class="stat-number"><span data-visitors="total">0</span></div>
+          <div class="stat-label" data-lang="en">Site Visitors</div>
+          <div class="stat-label" data-lang="fr">Visiteurs du site</div>
+          <div class="stat-label" data-lang="es">Visitantes del sitio</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-icon"><i class="fas fa-coffee"></i></div>
+          <div class="stat-number"><span class="counter" data-target="1200">0</span>+</div>
+          <div class="stat-label" data-lang="en">Cups of Coffee</div>
+          <div class="stat-label" data-lang="fr">Tasses de café</div>
+          <div class="stat-label" data-lang="es">Tazas de café</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT PREVIEW ===== -->
+  <section class="section about-preview" id="about-preview">
+    <div class="container">
+      <div class="about-preview-grid">
+        <div class="about-preview-img" data-aos="fade-right">
+          <div class="about-img-frame">
+            <img src="img/youssef-elamri-profile.png" alt="Youssef El Amri" loading="lazy" />
+            <div class="about-img-overlay">
+              <div class="about-img-badge">
+                <span class="number-highlight">2+</span>
+                <span data-lang="en">Years building projects (2022–2025)</span>
+                <span data-lang="fr">Années de projets (2022–2025)</span>
+                <span data-lang="es">Años de proyectos (2022–2025)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-preview-text" data-aos="fade-left">
+          <div class="section-tag" data-lang="en">About Me</div>
+          <div class="section-tag" data-lang="fr">À propos</div>
+          <div class="section-tag" data-lang="es">Sobre mí</div>
+          <h2 class="section-title">
+            <span data-lang="en">Crafting Digital <span>Experiences</span></span>
+            <span data-lang="fr">Créer des expériences <span>numériques</span></span>
+            <span data-lang="es">Creando experiencias <span>digitales</span></span>
+          </h2>
+          <p data-lang="en">
+            I'm <strong>Youssef El Amri</strong>, a web development student in <strong>Tétouan</strong>.
+            On my CV: freelance web work, a Java/C absence app in Al Hoceima, a phone e-commerce project, and
+            continuous learning in Java, PHP, HTML/CSS, C#, and MySQL.
+          </p>
+          <p data-lang="fr">
+            Je suis <strong>Youssef El Amri</strong>, étudiant en développement web à <strong>Tétouan</strong>.
+            Côté CV : travail freelance, application de gestion d'absences
+            (Java / C) à Al Hoceima, site e-commerce, et spécialisation en Java, PHP, HTML/CSS, C# et MySQL.
+          </p>
+          <p data-lang="es">
+            Soy <strong>Youssef El Amri</strong>, estudiante de desarrollo web en <strong>Tétouan</strong>.
+            En el CV: freelance, app de ausencias (Java / C) en Al Hoceima, proyecto
+            e-commerce, y foco en Java, PHP, HTML/CSS, C# y MySQL.
+          </p>
+          <div class="about-quick-info">
+            <div class="quick-info-item"><i class="fas fa-map-marker-alt"></i><span data-lang="en">Tétouan, Morocco</span><span data-lang="fr">Tétouan, Maroc</span><span data-lang="es">Tétouan, Marruecos</span></div>
+            <div class="quick-info-item"><i class="fas fa-graduation-cap"></i><span data-lang="en">Student — SUPISI (diploma in progress)</span><span data-lang="fr">Étudiant — SUPISI (diplôme en cours)</span><span data-lang="es">Estudiante — SUPISI (en curso)</span></div>
+            <div class="quick-info-item"><i class="fas fa-language"></i><span>FR (B2) · EN (B1) · AR (native)</span></div>
+            <div class="quick-info-item"><i class="fas fa-link"></i><a href="https://www.youssef-dev-portfolio.com" target="_blank" rel="noopener" style="color:inherit;">youssef-dev-portfolio.com</a></div>
+          </div>
+          <a href="about.html" class="btn btn-primary mt-3">
+            <span data-lang="en">Learn More About Me</span>
+            <span data-lang="fr">En savoir plus</span>
+            <span data-lang="es">Conóceme mejor</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS PREVIEW ===== -->
+  <section class="section skills-preview bg-alt" id="skills-preview">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">What I Do</div>
+        <div class="section-tag" data-lang="fr">Ce que je fais</div>
+        <div class="section-tag" data-lang="es">Lo que hago</div>
+        <h2 class="section-title">
+          <span data-lang="en">My <span>Expertise</span></span>
+          <span data-lang="fr">Mon <span>expertise</span></span>
+          <span data-lang="es">Mi <span>experiencia</span></span>
+        </h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle" data-lang="en">A diverse set of skills built over years of learning and real-world projects</p>
+        <p class="section-subtitle" data-lang="fr">Un ensemble de compétences variées acquises au fil des années</p>
+        <p class="section-subtitle" data-lang="es">Un conjunto diverso de habilidades construido con años de aprendizaje y proyectos reales</p>
+      </div>
+      <div class="skills-cards grid-3">
+        <div class="skill-service-card card tilt-card gradient-border" data-aos="fade-up" data-aos-delay="0">
+          <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
+          <h3 data-lang="en">Frontend Development</h3>
+          <h3 data-lang="fr">Développement Frontend</h3>
+          <h3 data-lang="es">Desarrollo Frontend</h3>
+          <p data-lang="en">Building clean, responsive web pages with HTML, CSS, and the Bootstrap framework.</p>
+          <p data-lang="fr">Création de pages web claires et responsives avec HTML, CSS et le framework Bootstrap.</p>
+          <p data-lang="es">Creación de páginas web limpias y responsivas con HTML, CSS y el framework Bootstrap.</p>
+          <div class="skill-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span></div>
+        </div>
+        <div class="skill-service-card card tilt-card gradient-border" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-circle"><i class="fas fa-server"></i></div>
+          <h3 data-lang="en">Backend &amp; Web Apps</h3>
+          <h3 data-lang="fr">Backend &amp; Applications Web</h3>
+          <h3 data-lang="es">Backend y Aplicaciones Web</h3>
+          <p data-lang="en">Building server-side logic and web applications with PHP, Laravel, and SQL databases.</p>
+          <p data-lang="fr">Développement de la logique serveur et d'applications web avec PHP, Laravel et bases de données SQL.</p>
+          <p data-lang="es">Desarrollo de la lógica del servidor y aplicaciones web con PHP, Laravel y bases de datos SQL.</p>
+          <div class="skill-tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">SQL</span></div>
+        </div>
+        <div class="skill-service-card card tilt-card gradient-border" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-circle"><i class="fas fa-code"></i></div>
+          <h3 data-lang="en">Programming Languages</h3>
+          <h3 data-lang="fr">Langages de programmation</h3>
+          <h3 data-lang="es">Lenguajes de programación</h3>
+          <p data-lang="en">Solid foundation in object-oriented and procedural programming with Java, C#, VB, and Python.</p>
+          <p data-lang="fr">Bonnes bases en programmation orientée objet et procédurale avec Java, C#, VB et Python.</p>
+          <p data-lang="es">Sólida base en programación orientada a objetos y procedimental con Java, C#, VB y Python.</p>
+          <div class="skill-tags"><span class="tag">Java</span><span class="tag">C#</span><span class="tag">VB</span><span class="tag">Python</span></div>
+        </div>
+      </div>
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="skills.html" class="btn btn-outline btn-lg">
+          <span data-lang="en">View All Skills</span>
+          <span data-lang="fr">Voir toutes les compétences</span>
+          <span data-lang="es">Ver todas las habilidades</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Services</div>
+        <div class="section-tag" data-lang="fr">Services</div>
+        <div class="section-tag" data-lang="es">Servicios</div>
+        <h2 class="section-title">
+          <span data-lang="en">How I Can <span>Help You</span></span>
+          <span data-lang="fr">Comment je peux <span>vous aider</span></span>
+          <span data-lang="es">Cómo puedo <span>ayudarte</span></span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-num">01</div>
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3 data-lang="en">Web Applications</h3>
+          <h3 data-lang="fr">Applications Web</h3>
+          <h3 data-lang="es">Aplicaciones Web</h3>
+          <p data-lang="en">End-to-end custom web apps, from MVP to enterprise scale — fast, secure, and delightful.</p>
+          <p data-lang="fr">Applications web sur mesure, du MVP à l'échelle entreprise — rapides, sûres et agréables.</p>
+          <p data-lang="es">Aplicaciones web a medida, de MVP a escala empresarial — rápidas, seguras y agradables.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> HTML / CSS / Bootstrap</li>
+            <li><i class="fas fa-check"></i> PHP &amp; Laravel backends</li>
+            <li><i class="fas fa-check"></i> SQL databases</li>
+          </ul>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-num">02</div>
+          <div class="service-icon"><i class="fas fa-desktop"></i></div>
+          <h3 data-lang="en">Desktop Applications</h3>
+          <h3 data-lang="fr">Applications de bureau</h3>
+          <h3 data-lang="es">Aplicaciones de escritorio</h3>
+          <p data-lang="en">Reliable desktop and enterprise applications built with Java, C# and Visual Basic.</p>
+          <p data-lang="fr">Applications de bureau et d'entreprise fiables avec Java, C# et Visual Basic.</p>
+          <p data-lang="es">Aplicaciones de escritorio y empresariales confiables con Java, C# y Visual Basic.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Java</li>
+            <li><i class="fas fa-check"></i> C# / .NET</li>
+            <li><i class="fas fa-check"></i> Visual Basic</li>
+          </ul>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-num">03</div>
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h3 data-lang="en">Databases &amp; Scripting</h3>
+          <h3 data-lang="fr">Bases de données &amp; Scripts</h3>
+          <h3 data-lang="es">Bases de datos y Scripting</h3>
+          <p data-lang="en">Designing relational schemas with SQL and automating tasks using Python scripts.</p>
+          <p data-lang="fr">Conception de schémas relationnels en SQL et automatisation de tâches avec Python.</p>
+          <p data-lang="es">Diseño de esquemas relacionales con SQL y automatización de tareas con Python.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> SQL queries &amp; schemas</li>
+            <li><i class="fas fa-check"></i> Python scripts</li>
+            <li><i class="fas fa-check"></i> Data import / export</li>
+          </ul>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-num">04</div>
+          <div class="service-icon"><i class="fas fa-gauge-high"></i></div>
+          <h3 data-lang="en">Performance &amp; SEO</h3>
+          <h3 data-lang="fr">Performance &amp; SEO</h3>
+          <h3 data-lang="es">Rendimiento &amp; SEO</h3>
+          <p data-lang="en">Core Web Vitals optimization, SEO best practices, and accessibility audits that move the needle.</p>
+          <p data-lang="fr">Optimisation des Core Web Vitals, SEO et audits d'accessibilité qui changent la donne.</p>
+          <p data-lang="es">Optimización de Core Web Vitals, SEO y auditorías de accesibilidad que marcan la diferencia.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Lighthouse 95+</li>
+            <li><i class="fas fa-check"></i> Technical SEO</li>
+            <li><i class="fas fa-check"></i> WCAG compliance</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS TIMELINE ===== -->
+  <section class="section process-section bg-alt" id="process">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">How We Work</div>
+        <div class="section-tag" data-lang="fr">Ma méthode</div>
+        <div class="section-tag" data-lang="es">Cómo trabajamos</div>
+        <h2 class="section-title">
+          <span data-lang="en">My <span>Process</span></span>
+          <span data-lang="fr">Mon <span>processus</span></span>
+          <span data-lang="es">Mi <span>proceso</span></span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step" data-aos="fade-up">
+          <div class="process-step-num">1</div>
+          <div class="process-step-body">
+            <h4 data-lang="en">Discovery &amp; Strategy</h4>
+            <h4 data-lang="fr">Découverte &amp; stratégie</h4>
+            <h4 data-lang="es">Descubrimiento &amp; estrategia</h4>
+            <p data-lang="en">We start with your goals, users, and constraints to shape a clear plan.</p>
+            <p data-lang="fr">Nous partons de vos objectifs, utilisateurs et contraintes pour un plan clair.</p>
+            <p data-lang="es">Partimos de tus objetivos, usuarios y restricciones para definir un plan claro.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-step-num">2</div>
+          <div class="process-step-body">
+            <h4 data-lang="en">Design &amp; Prototype</h4>
+            <h4 data-lang="fr">Design &amp; prototype</h4>
+            <h4 data-lang="es">Diseño &amp; prototipo</h4>
+            <p data-lang="en">Interactive Figma prototypes so you feel the product before a single line of code.</p>
+            <p data-lang="fr">Prototypes Figma interactifs pour ressentir le produit avant toute ligne de code.</p>
+            <p data-lang="es">Prototipos interactivos en Figma para sentir el producto antes de escribir una línea de código.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-step-num">3</div>
+          <div class="process-step-body">
+            <h4 data-lang="en">Build &amp; Iterate</h4>
+            <h4 data-lang="fr">Développement &amp; itération</h4>
+            <h4 data-lang="es">Desarrollo &amp; iteración</h4>
+            <p data-lang="en">Weekly demos, clean code, solid tests — you see progress, not black boxes.</p>
+            <p data-lang="fr">Démos hebdomadaires, code propre, tests solides — visibilité totale.</p>
+            <p data-lang="es">Demos semanales, código limpio, pruebas sólidas — ves el progreso, no cajas negras.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-step-num">4</div>
+          <div class="process-step-body">
+            <h4 data-lang="en">Launch &amp; Support</h4>
+            <h4 data-lang="fr">Lancement &amp; support</h4>
+            <h4 data-lang="es">Lanzamiento &amp; soporte</h4>
+            <p data-lang="en">Smooth go-live, monitoring, and continuous improvement after launch.</p>
+            <p data-lang="fr">Mise en production fluide, monitoring et amélioration continue après le lancement.</p>
+            <p data-lang="es">Puesta en producción fluida, monitoreo y mejora continua tras el lanzamiento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PROJECTS ===== -->
+  <section class="section featured-projects" id="featured-projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Portfolio</div>
+        <div class="section-tag" data-lang="fr">Portfolio</div>
+        <div class="section-tag" data-lang="es">Portafolio</div>
+        <h2 class="section-title">
+          <span data-lang="en">Featured <span>Projects</span></span>
+          <span data-lang="fr">Projets <span>phares</span></span>
+          <span data-lang="es">Proyectos <span>destacados</span></span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card project-card-launchable" data-launch-url="api/launch.php?app=edutrack" data-launch-mode="app" data-aos="fade-up" data-aos-delay="0" style="cursor:pointer;">
+          <div class="project-img">
+            <img src="img/edutrack-cover.png" alt="EduTrack — Student Management" loading="lazy" />
+            <div class="project-overlay">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+            <span class="project-live-badge" title="App is running locally">
+              <i class="fas fa-circle"></i>
+              <span data-lang="en">Live</span>
+              <span data-lang="fr">En ligne</span>
+              <span data-lang="es">En vivo</span>
+            </span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span class="badge badge-primary">Laravel 12</span><span class="badge badge-accent">PHP</span><span class="badge badge-success">SQLite</span></div>
+            <h3 data-lang="en">EduTrack — Student Management</h3>
+            <h3 data-lang="fr">EduTrack — Gestion des étudiants</h3>
+            <h3 data-lang="es">EduTrack — Gestión de estudiantes</h3>
+            <p data-lang="en">Laravel 12 web app for Sup'ISI to manage students with full CRUD, authentication and protected routes. Click to launch!</p>
+            <p data-lang="fr">Application Laravel 12 pour Sup'ISI pour gérer les étudiants avec CRUD complet, authentification et routes protégées. Cliquez pour lancer!</p>
+            <p data-lang="es">Aplicación Laravel 12 para Sup'ISI para gestionar estudiantes con CRUD completo, autenticación y rutas protegidas. ¡Haz clic para abrir!</p>
+            <div class="project-links">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="project-card project-card-launchable" data-launch-url="api/launch.php?app=smartcreche" data-launch-mode="app" data-aos="fade-up" data-aos-delay="150" style="cursor:pointer;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80" alt="SmartCreche — Daycare Management" loading="lazy" />
+            <div class="project-overlay">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+            <span class="project-live-badge project-badge-desktop" title="Desktop application">
+              <i class="fas fa-desktop"></i>
+              <span data-lang="en">Desktop</span>
+              <span data-lang="fr">Bureau</span>
+              <span data-lang="es">Escritorio</span>
+            </span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span class="badge badge-primary">VB.NET</span><span class="badge badge-accent">WinForms</span><span class="badge badge-success">SQLite</span></div>
+            <h3 data-lang="en">SmartCreche — Daycare Management</h3>
+            <h3 data-lang="fr">SmartCreche — Gestion de crèche</h3>
+            <h3 data-lang="es">SmartCreche — Gestión de guardería</h3>
+            <p data-lang="en">VB.NET 8 Windows Forms desktop app: children / families CRUD, invoicing, PDF &amp; Excel reports, SQLite. Click to launch!</p>
+            <p data-lang="fr">App desktop VB.NET 8 Windows Forms : CRUD enfants / familles, facturation, rapports PDF &amp; Excel, SQLite. Cliquez pour lancer!</p>
+            <p data-lang="es">App de escritorio VB.NET 8 Windows Forms: CRUD niños / familias, facturación, informes PDF y Excel, SQLite. ¡Haz clic para abrir!</p>
+            <div class="project-links">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+              <a href="downloads/SmartCreche_v1.0.zip" download class="btn btn-outline btn-sm" onclick="event.stopPropagation();">
+                <i class="fas fa-download"></i>
+                <span data-lang="en">Download</span>
+                <span data-lang="fr">Télécharger</span>
+                <span data-lang="es">Descargar</span>
+              </a>
+              <button type="button" class="btn btn-danger btn-sm"
+                      data-video-src="videos/smartcreche-demo-20260425.mp4"
+                      data-video-poster="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1280&amp;q=85"
+                      data-video-title="SmartCreche — Demo"
+                      onclick="event.stopPropagation();">
+                <i class="fas fa-play"></i>
+                <span data-lang="en">Watch Demo</span>
+                <span data-lang="fr">Voir la démo</span>
+                <span data-lang="es">Ver demo</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 — Real Calculator PRO (Java Swing desktop) -->
+        <div class="project-card project-card-launchable" data-launch-url="api/launch.php?app=realcalc" data-launch-mode="app" data-aos="fade-up" data-aos-delay="300" style="cursor:pointer;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&q=80" alt="Real Calculator PRO — Java Swing desktop calculator" loading="lazy" />
+            <div class="project-overlay">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+            </div>
+            <span class="project-live-badge project-badge-desktop" title="Desktop application">
+              <i class="fas fa-desktop"></i>
+              <span data-lang="en">Desktop</span>
+              <span data-lang="fr">Bureau</span>
+              <span data-lang="es">Escritorio</span>
+            </span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="badge badge-primary">Java 11+</span>
+              <span class="badge badge-accent">Swing</span>
+              <span class="badge badge-success">BigDecimal</span>
+            </div>
+            <h3 data-lang="en">Real Calculator PRO — Premium Desktop Calculator</h3>
+            <h3 data-lang="fr">Real Calculator PRO — Calculatrice de bureau premium</h3>
+            <h3 data-lang="es">Real Calculator PRO — Calculadora de escritorio premium</h3>
+            <p data-lang="en">
+              Java Swing calculator with 3 themes (Dark / Light / Neon), persistent settings, clickable history, button sound, full keyboard support, and BigDecimal precision. Zero external dependencies.
+            </p>
+            <p data-lang="fr">
+              Calculatrice Java Swing avec 3 thèmes (Dark / Light / Neon), paramètres persistants, historique cliquable, son des boutons, support clavier complet et précision BigDecimal. Zéro dépendance externe.
+            </p>
+            <p data-lang="es">
+              Calculadora Java Swing con 3 temas (Dark / Light / Neon), ajustes persistentes, historial clickable, sonido de botones, soporte completo de teclado y precisión BigDecimal. Cero dependencias externas.
+            </p>
+            <div class="project-links">
+              <button type="button" class="btn btn-primary btn-sm" data-launch-trigger>
+                <i class="fas fa-rocket"></i>
+                <span data-lang="en">Launch App</span>
+                <span data-lang="fr">Lancer l'app</span>
+                <span data-lang="es">Abrir app</span>
+              </button>
+              <a href="downloads/RealCalculatorPro_v1.0.zip" download class="btn btn-outline btn-sm" onclick="event.stopPropagation();">
+                <i class="fas fa-download"></i>
+                <span data-lang="en">Download (.zip)</span>
+                <span data-lang="fr">Télécharger (.zip)</span>
+                <span data-lang="es">Descargar (.zip)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="projects.html" class="btn btn-outline btn-lg">
+          <span data-lang="en">View All Projects</span>
+          <span data-lang="fr">Voir tous les projets</span>
+          <span data-lang="es">Ver todos los proyectos</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECT SPOTLIGHT ===== -->
+  <section class="section spotlight-section bg-alt" id="spotlight">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Spotlight</div>
+        <div class="section-tag" data-lang="fr">Focus</div>
+        <div class="section-tag" data-lang="es">Destacado</div>
+        <h2 class="section-title">
+          <span data-lang="en">Project <span>Spotlight</span></span>
+          <span data-lang="fr">Projet <span>à la une</span></span>
+          <span data-lang="es">Proyecto <span>destacado</span></span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <article class="spotlight-card card-glass" data-aos="fade-up">
+        <div class="spotlight-media">
+          <video controls preload="metadata" poster="img/edutrack-cover.png">
+            <source src="videos/edutrack-demo.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="spotlight-content">
+          <div class="spotlight-badges">
+            <span class="badge badge-primary">Laravel 12</span>
+            <span class="badge badge-accent">PHP 8.2</span>
+            <span class="badge badge-success">SQLite</span>
+          </div>
+          <h3 data-lang="en">EduTrack - Student Management Platform</h3>
+          <h3 data-lang="fr">EduTrack - Plateforme de gestion des etudiants</h3>
+          <h3 data-lang="es">EduTrack - Plataforma de gestion de estudiantes</h3>
+          <p data-lang="en">A production-ready platform with authentication, protected routes, and clean admin workflows for school management.</p>
+          <p data-lang="fr">Une plateforme prete pour la production avec authentification, routes protegees et workflow admin clair.</p>
+          <p data-lang="es">Una plataforma lista para produccion con autenticacion, rutas protegidas y flujo admin limpio.</p>
+          <div class="spotlight-kpis">
+            <div><strong>4</strong><span data-lang="en">Core modules</span><span data-lang="fr">Modules cles</span><span data-lang="es">Modulos clave</span></div>
+            <div><strong>100%</strong><span data-lang="en">Responsive UI</span><span data-lang="fr">UI responsive</span><span data-lang="es">UI responsive</span></div>
+            <div><strong>24/7</strong><span data-lang="en">Local launch</span><span data-lang="fr">Lancement local</span><span data-lang="es">Lanzamiento local</span></div>
+          </div>
+          <div class="spotlight-actions">
+            <a href="projects.html" class="btn btn-primary">
+              <i class="fas fa-folder-open"></i>
+              <span data-lang="en">Explore Projects</span>
+              <span data-lang="fr">Explorer les projets</span>
+              <span data-lang="es">Explorar proyectos</span>
+            </a>
+            <a href="api/launch.php?app=edutrack" class="btn btn-outline" target="_blank" rel="noopener">
+              <i class="fas fa-rocket"></i>
+              <span data-lang="en">Launch EduTrack</span>
+              <span data-lang="fr">Lancer EduTrack</span>
+              <span data-lang="es">Abrir EduTrack</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== COLLABORATIONS ===== -->
+  <section class="section collaborators-section" id="collaborations">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Collaborations</div>
+        <div class="section-tag" data-lang="fr">Collaborations</div>
+        <div class="section-tag" data-lang="es">Colaboraciones</div>
+        <h2 class="section-title">
+          <span data-lang="en">Worked With <span>Great Teams</span></span>
+          <span data-lang="fr">Collaboration avec <span>de grandes equipes</span></span>
+          <span data-lang="es">He colaborado con <span>grandes equipos</span></span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="collab-grid" data-aos="fade-up">
+        <div class="collab-item"><i class="fas fa-school"></i><span>SUPISI</span></div>
+        <div class="collab-item"><i class="fas fa-laptop-code"></i><span>Freelance Clients</span></div>
+        <div class="collab-item"><i class="fas fa-building"></i><span>Local SMEs</span></div>
+        <div class="collab-item"><i class="fas fa-users"></i><span>Student Teams</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECH MARQUEE ===== -->
+  <section class="tech-marquee-section bg-alt">
+    <div class="marquee-label" data-lang="en">Technologies I Work With</div>
+    <div class="marquee-label" data-lang="fr">Technologies que j'utilise</div>
+    <div class="marquee-label" data-lang="es">Tecnologías que uso</div>
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span><i class="fab fa-html5"></i> HTML</span>
+        <span><i class="fab fa-css3-alt"></i> CSS</span>
+        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+        <span><i class="fab fa-php"></i> PHP</span>
+        <span><i class="fab fa-laravel"></i> Laravel</span>
+        <span><i class="fab fa-java"></i> Java</span>
+        <span><i class="fas fa-hashtag"></i> C#</span>
+        <span><i class="fab fa-microsoft"></i> VB</span>
+        <span><i class="fab fa-python"></i> Python</span>
+        <span><i class="fas fa-database"></i> SQL</span>
+        <span><i class="fab fa-html5"></i> HTML</span>
+        <span><i class="fab fa-css3-alt"></i> CSS</span>
+        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+        <span><i class="fab fa-php"></i> PHP</span>
+        <span><i class="fab fa-laravel"></i> Laravel</span>
+        <span><i class="fab fa-java"></i> Java</span>
+        <span><i class="fas fa-hashtag"></i> C#</span>
+        <span><i class="fab fa-microsoft"></i> VB</span>
+        <span><i class="fab fa-python"></i> Python</span>
+        <span><i class="fas fa-database"></i> SQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonial-preview">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Testimonials</div>
+        <div class="section-tag" data-lang="fr">Témoignages</div>
+        <div class="section-tag" data-lang="es">Testimonios</div>
+        <h2 class="section-title">
+          <span data-lang="en">What People <span>Say</span></span>
+          <span data-lang="fr">Ce que les gens <span>disent</span></span>
+          <span data-lang="es">Lo que la gente <span>dice</span></span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="swiper testimonial-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-card card-glass">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text" data-lang="en">
+                "Youssef delivered an exceptional e-commerce platform that exceeded all our expectations. His attention to detail and technical expertise are truly remarkable."
+              </p>
+              <p class="testimonial-text" data-lang="fr">
+                "Youssef a livré une plateforme e-commerce exceptionnelle qui a dépassé toutes nos attentes. Son attention aux détails et son expertise technique sont vraiment remarquables."
+              </p>
+              <p class="testimonial-text" data-lang="es">
+                "Youssef entregó una plataforma e-commerce excepcional que superó todas nuestras expectativas. Su atención al detalle y experiencia técnica son realmente notables."
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background:linear-gradient(135deg,#b6e3f4,#6c63ff);">SJ</div>
+                <div><strong>Sarah Johnson</strong><span>CEO, TechStart Inc.</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card card-glass">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text" data-lang="en">
+                "Working with Youssef was a pleasure. He transformed our outdated website into a modern, fast, and beautiful platform. Highly recommended!"
+              </p>
+              <p class="testimonial-text" data-lang="fr">
+                "Travailler avec Youssef a été un plaisir. Il a transformé notre site obsolète en une plateforme moderne, rapide et belle. Fortement recommandé!"
+              </p>
+              <p class="testimonial-text" data-lang="es">
+                "Trabajar con Youssef fue un placer. Transformó nuestro sitio anticuado en una plataforma moderna, rápida y hermosa. ¡Muy recomendado!"
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background:linear-gradient(135deg,#c0aede,#ff6584);">AB</div>
+                <div><strong>Ahmed Benali</strong><span>Product Manager, DataFlow</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card card-glass">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text" data-lang="en">
+                "Pixel-perfect delivery, blazing fast, and great communication. We shipped two weeks ahead of schedule."
+              </p>
+              <p class="testimonial-text" data-lang="fr">
+                "Livraison parfaite au pixel près, ultra rapide, super communication. Livré avec deux semaines d'avance."
+              </p>
+              <p class="testimonial-text" data-lang="es">
+                "Entrega perfecta al píxel, ultrarrápida y gran comunicación. Lanzamos dos semanas antes de lo previsto."
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background:linear-gradient(135deg,#22c55e,#6c63ff);">LC</div>
+                <div><strong>Laura Chen</strong><span>CTO, PixelForge</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="text-center mt-4" data-aos="fade-up">
+        <a href="testimonials.html" class="btn btn-outline">
+          <span data-lang="en">Read All Testimonials</span>
+          <span data-lang="fr">Voir tous les témoignages</span>
+          <span data-lang="es">Ver todos los testimonios</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG PREVIEW ===== -->
+  <section class="section blog-preview bg-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag" data-lang="en">Latest Articles</div>
+        <div class="section-tag" data-lang="fr">Derniers articles</div>
+        <div class="section-tag" data-lang="es">Últimos artículos</div>
+        <h2 class="section-title">
+          <span data-lang="en">From My <span>Blog</span></span>
+          <span data-lang="fr">De mon <span>blog</span></span>
+          <span data-lang="es">Desde mi <span>blog</span></span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="blog-grid grid-3">
+        <article class="blog-card card" data-aos="fade-up" data-aos-delay="0">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&q=80" alt="Laravel Article" loading="lazy" />
+            <span class="blog-category">Laravel</span>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> Jan 15, 2025</span>
+              <span><i class="fas fa-clock"></i> 5 min read</span>
+            </div>
+            <h4 data-lang="en">Building Clean PHP Apps with Laravel &amp; MVC</h4>
+            <h4 data-lang="fr">Créer des applications PHP propres avec Laravel &amp; MVC</h4>
+            <h4 data-lang="es">Crear aplicaciones PHP limpias con Laravel y MVC</h4>
+            <p data-lang="en">Learn how to structure a Laravel project for maintainability, with Eloquent, routes, and services...</p>
+            <p data-lang="fr">Apprenez à structurer un projet Laravel pour la maintenabilité, avec Eloquent, routes et services...</p>
+            <p data-lang="es">Aprende a estructurar un proyecto Laravel para la mantenibilidad, con Eloquent, rutas y servicios...</p>
+            <a href="blog.html" class="blog-read-more">
+              <span data-lang="en">Read More</span>
+              <span data-lang="fr">Lire la suite</span>
+              <span data-lang="es">Leer más</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+        <article class="blog-card card" data-aos="fade-up" data-aos-delay="150">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&q=80" alt="CSS Article" loading="lazy" />
+            <span class="blog-category">CSS</span>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> Jan 8, 2025</span>
+              <span><i class="fas fa-clock"></i> 7 min read</span>
+            </div>
+            <h4 data-lang="en">Modern CSS Techniques Every Developer Should Know</h4>
+            <h4 data-lang="fr">Techniques CSS modernes</h4>
+            <h4 data-lang="es">Técnicas CSS modernas que todo dev debe conocer</h4>
+            <p data-lang="en">Explore CSS Grid, Container Queries, and the latest CSS features...</p>
+            <p data-lang="fr">Explorez CSS Grid, Container Queries et les dernières fonctionnalités CSS...</p>
+            <p data-lang="es">Explora CSS Grid, Container Queries y las últimas novedades de CSS...</p>
+            <a href="blog.html" class="blog-read-more">
+              <span data-lang="en">Read More</span>
+              <span data-lang="fr">Lire la suite</span>
+              <span data-lang="es">Leer más</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+        <article class="blog-card card" data-aos="fade-up" data-aos-delay="300">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=80" alt="SQL Article" loading="lazy" />
+            <span class="blog-category">SQL</span>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> Dec 28, 2024</span>
+              <span><i class="fas fa-clock"></i> 10 min read</span>
+            </div>
+            <h4 data-lang="en">SQL Query Optimization for Faster Web Apps</h4>
+            <h4 data-lang="fr">Optimisation des requêtes SQL pour des apps web rapides</h4>
+            <h4 data-lang="es">Optimización de consultas SQL para apps web más rápidas</h4>
+            <p data-lang="en">A practical guide to indexes, JOIN performance, and avoiding N+1 queries in PHP / Laravel apps...</p>
+            <p data-lang="fr">Guide pratique des index, performance des JOIN et comment éviter les requêtes N+1 dans les apps PHP / Laravel...</p>
+            <p data-lang="es">Guía práctica sobre índices, rendimiento de JOIN y cómo evitar consultas N+1 en apps PHP / Laravel...</p>
+            <a href="blog.html" class="blog-read-more">
+              <span data-lang="en">Read More</span>
+              <span data-lang="fr">Lire la suite</span>
+              <span data-lang="es">Leer más</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="blog.html" class="btn btn-outline btn-lg">
+          <span data-lang="en">View All Articles</span>
+          <span data-lang="fr">Voir tous les articles</span>
+          <span data-lang="es">Ver todos los artículos</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="section newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-card gradient-border" data-aos="fade-up">
+        <div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+        <div class="newsletter-body">
+          <h3 data-lang="en">Join the Newsletter</h3>
+          <h3 data-lang="fr">Abonnez-vous à la newsletter</h3>
+          <h3 data-lang="es">Únete al boletín</h3>
+          <p data-lang="en">Get fresh articles, project updates, and dev tips — no spam, unsubscribe anytime. <strong><span data-sub-count>0</span></strong> subscribers already.</p>
+          <p data-lang="fr">Recevez articles, mises à jour et astuces dev — sans spam, désabonnement à tout moment. Déjà <strong><span data-sub-count>0</span></strong> abonnés.</p>
+          <p data-lang="es">Recibe artículos, novedades y tips de desarrollo — sin spam, cancela cuando quieras. Ya <strong><span data-sub-count>0</span></strong> suscriptores.</p>
+          <form class="newsletter-form" novalidate>
+            <input type="email" class="form-control" name="email" placeholder="you@example.com" aria-label="Your email" required />
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              <span data-lang="en">Subscribe</span>
+              <span data-lang="fr">S'abonner</span>
+              <span data-lang="es">Suscribirse</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos="zoom-in">
+        <div class="cta-blob blob-primary" style="width:300px;height:300px;top:-50px;right:-50px;"></div>
+        <div class="cta-blob blob-accent" style="width:200px;height:200px;bottom:-30px;left:-30px;"></div>
+        <div class="section-tag" data-lang="en">Let's Work Together</div>
+        <div class="section-tag" data-lang="fr">Travaillons ensemble</div>
+        <div class="section-tag" data-lang="es">Trabajemos juntos</div>
+        <h2 class="shimmer-text" data-lang="en">Have a Project in Mind?</h2>
+        <h2 class="shimmer-text" data-lang="fr">Vous avez un projet en tête ?</h2>
+        <h2 class="shimmer-text" data-lang="es">¿Tienes un proyecto en mente?</h2>
+        <p data-lang="en">
+          I'm always open to discussing new projects, creative ideas, or opportunities
+          to be part of your vision. Let's build something amazing together!
+        </p>
+        <p data-lang="fr">
+          Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités
+          pour faire partie de votre vision. Construisons quelque chose d'incroyable ensemble !
+        </p>
+        <p data-lang="es">
+          Siempre estoy abierto a hablar de nuevos proyectos, ideas creativas u oportunidades
+          para formar parte de tu visión. ¡Construyamos algo increíble juntos!
+        </p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-paper-plane"></i>
+            <span data-lang="en">Start a Conversation</span>
+            <span data-lang="fr">Commencer la conversation</span>
+            <span data-lang="es">Iniciar una conversación</span>
+          </a>
+          <a href="https://wa.me/212632980466" class="btn btn-success btn-lg" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+            <span data-lang="en">WhatsApp</span>
+            <span data-lang="fr">WhatsApp</span>
+            <span data-lang="es">WhatsApp</span>
+          </a>
+          <a href="resume.html" class="btn btn-outline btn-lg">
+            <i class="fas fa-file-alt"></i>
+            <span data-lang="en">View Resume</span>
+            <span data-lang="fr">Voir le CV</span>
+            <span data-lang="es">Ver CV</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">YEA.</div>
+          <p data-lang="en">Web developer based in Tétouan, Morocco. Building digital experiences that matter.</p>
+          <p data-lang="fr">Développeur web basé à Tétouan, Maroc. Création d'expériences numériques qui comptent.</p>
+          <p data-lang="es">Desarrollador web con base en Tétouan, Marruecos. Creando experiencias digitales que importan.</p>
+          <div class="footer-social">
+            <a href="https://github.com/Youssef-890" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/youssefElamri" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/youssefElamri" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/youssef_elamri__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" data-copy="youssefelamri2004@gmail.com" aria-label="Copy email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Quick Links</h4>
+          <h4 data-lang="fr">Liens rapides</h4>
+          <h4 data-lang="es">Enlaces rápidos</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">More Pages</h4>
+          <h4 data-lang="fr">Plus de pages</h4>
+          <h4 data-lang="es">Más páginas</h4>
+          <ul>
+            <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+            <li><a href="achievements.html"><i class="fas fa-chevron-right"></i> Achievements</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-lang="en">Contact</h4>
+          <h4 data-lang="fr">Contact</h4>
+          <h4 data-lang="es">Contacto</h4>
+          <ul>
+            <li><a href="#" data-copy="youssefelamri2004@gmail.com"><i class="fas fa-envelope"></i> youssefelamri2004@gmail.com</a></li>
+            <li><a href="#" data-copy="+212632980466"><i class="fas fa-phone"></i> +212 632-980-466</a></li>
+            <li><span><i class="fas fa-map-marker-alt"></i> Tétouan, Morocco</span></li>
+            <li>
+              <a href="contact.html">
+                <i class="fas fa-paper-plane"></i>
+                <span data-lang="en">Send Message</span>
+                <span data-lang="fr">Envoyer un message</span>
+                <span data-lang="es">Enviar mensaje</span>
+              </a>
+            </li>
+            <li>
+              <a href="admin/index.php">
+                <i class="fas fa-lock"></i>
+                <span data-lang="en">Admin</span>
+                <span data-lang="fr">Admin</span>
+                <span data-lang="es">Admin</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> <span>Youssef El Amri</span>. Made with <span>&#9829;</span> in Morocco. <span style="opacity:0.6;margin-left:8px;">Press <span class="kbd">Ctrl</span>+<span class="kbd">K</span> to navigate.</span></p>
+        <div class="footer-bottom-links">
+          <a href="resume.html" data-lang="en">Resume</a>
+          <a href="resume.html" data-lang="fr">CV</a>
+          <a href="resume.html" data-lang="es">CV</a>
+          <a href="contact.html" data-lang="en">Contact</a>
+          <a href="contact.html" data-lang="fr">Contact</a>
+          <a href="contact.html" data-lang="es">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL TOP ===== -->
+  <button class="scroll-top" id="scrollTop" title="Back to top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- ===== COMMAND PALETTE ===== -->
+  <div class="cmd-palette" id="cmdPalette" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="cmd-palette-box">
+      <div class="cmd-palette-header">
+        <i class="fas fa-search"></i>
+        <input
+          id="cmdPaletteInput"
+          class="cmd-palette-input"
+          type="text"
+          placeholder="Type a page or command…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <span class="cmd-palette-esc">ESC</span>
+      </div>
+      <div id="cmdPaletteList" class="cmd-palette-list"></div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/global.js?v=9"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
