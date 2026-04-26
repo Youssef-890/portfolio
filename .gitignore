@@ -5,4 +5,5 @@ api/logs/
 Thumbs.db
 videos/*.mp4
 !videos/299527.mp4
+!videos/spotlight-custom.mp4
 downloads/*.zip
