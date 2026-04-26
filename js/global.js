@@ -1385,11 +1385,6 @@
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
       contactForm.addEventListener('submit', async (e) => {
-        if (IS_GITHUB_PAGES) {
-          e.preventDefault();
-          showToast('Contact form works on the PHP-hosted version only.', 'info', 3000);
-          return;
-        }
         e.preventDefault();
         const fd = new FormData(contactForm);
         const payload = {
@@ -1404,6 +1399,22 @@
         }
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
           return showToast('Please enter a valid email', 'error');
+        }
+
+        if (IS_GITHUB_PAGES) {
+          const to = 'youssefelamri2004@gmail.com';
+          const body = [
+            'Name: ' + payload.name,
+            'Email: ' + payload.email,
+            '',
+            payload.message
+          ].join('\n');
+          const mailto = 'mailto:' + encodeURIComponent(to)
+            + '?subject=' + encodeURIComponent('[Portfolio] ' + payload.subject)
+            + '&body=' + encodeURIComponent(body);
+          window.location.href = mailto;
+          showToast('Opening your email app...', 'success', 2500);
+          return;
         }
         const btn = contactForm.querySelector('button[type="submit"]');
         const original = btn?.innerHTML;
