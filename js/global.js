@@ -652,7 +652,7 @@
       textEl.textContent = desc || '';
       tagsWrap.innerHTML = tags.map(t => `<span class="badge badge-primary">${t}</span>`).join('');
       actions.innerHTML = ''
-        + '<button type="button" class="btn btn-primary btn-sm" data-panel-launch><i class="fas fa-rocket"></i> Launch</button>'
+        + '<button type="button" class="btn btn-primary btn-sm" data-panel-launch><i class="fas fa-rocket"></i> Demo Link</button>'
         + '<a href="projects.html" class="btn btn-outline btn-sm"><i class="fas fa-folder-open"></i> Projects</a>';
       actions.querySelector('[data-panel-launch]')?.addEventListener('click', (e) => {
         e.preventDefault();
