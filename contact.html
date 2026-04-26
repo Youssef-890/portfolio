@@ -306,6 +306,36 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/global.js?v=12"></script>
+  <script>
+    // Hard fallback for GitHub Pages: always open email compose
+    // and bypass any stale cached submit handlers.
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!/\.github\.io$/i.test(window.location.hostname)) return;
+      var form = document.getElementById('contactForm');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        var fd = new FormData(form);
+        var name = (fd.get('name') || '').toString().trim();
+        var email = (fd.get('email') || '').toString().trim();
+        var subject = (fd.get('subject') || '').toString().trim() || 'Portfolio message';
+        var message = (fd.get('message') || '').toString().trim();
+        if (!name || !email || !message) return;
+        var to = 'youssefelamri2004@gmail.com';
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+        var mailto = 'mailto:' + to
+          + '?subject=' + encodeURIComponent('[Portfolio] ' + subject)
+          + '&body=' + encodeURIComponent(body);
+        var gmail = 'https://mail.google.com/mail/?view=cm&fs=1'
+          + '&to=' + encodeURIComponent(to)
+          + '&su=' + encodeURIComponent('[Portfolio] ' + subject)
+          + '&body=' + encodeURIComponent(body);
+        window.location.href = mailto;
+        setTimeout(function () { window.open(gmail, '_blank', 'noopener'); }, 900);
+      }, true);
+    });
+  </script>
   <script src="js/contact.js"></script>
 </body>
 </html>
