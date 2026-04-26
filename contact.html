@@ -305,7 +305,19 @@
   <button class="scroll-top"><i class="fas fa-chevron-up"></i></button>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="js/global.js?v=12"></script>
+  <script src="js/global.js?v=99"></script>
+  <script>
+    // Prevent any stale handler from showing the old PHP-only toast.
+    (function () {
+      var originalShowToast = window.showToast;
+      window.showToast = function (message, type, duration) {
+        if (String(message || '').indexOf('PHP-hosted version only') !== -1) return;
+        if (typeof originalShowToast === 'function') {
+          return originalShowToast(message, type, duration);
+        }
+      };
+    })();
+  </script>
   <script>
     // Hard fallback for GitHub Pages: always open email compose
     // and bypass any stale cached submit handlers.
