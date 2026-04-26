@@ -336,15 +336,11 @@
         if (!name || !email || !message) return;
         var to = 'youssefelamri2004@gmail.com';
         var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
-        var mailto = 'mailto:' + to
-          + '?subject=' + encodeURIComponent('[Portfolio] ' + subject)
-          + '&body=' + encodeURIComponent(body);
         var gmail = 'https://mail.google.com/mail/?view=cm&fs=1'
           + '&to=' + encodeURIComponent(to)
           + '&su=' + encodeURIComponent('[Portfolio] ' + subject)
           + '&body=' + encodeURIComponent(body);
-        window.location.href = mailto;
-        setTimeout(function () { window.open(gmail, '_blank', 'noopener'); }, 900);
+        window.location.href = gmail;
       }, true);
     });
   </script>

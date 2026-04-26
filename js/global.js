@@ -1409,23 +1409,12 @@
             '',
             payload.message
           ].join('\n');
-          const mailto = 'mailto:' + to
-            + '?subject=' + encodeURIComponent('[Portfolio] ' + payload.subject)
-            + '&body=' + encodeURIComponent(body);
           const gmail = 'https://mail.google.com/mail/?view=cm&fs=1'
             + '&to=' + encodeURIComponent(to)
             + '&su=' + encodeURIComponent('[Portfolio] ' + payload.subject)
             + '&body=' + encodeURIComponent(body);
-          try {
-            window.location.href = mailto;
-            setTimeout(() => {
-              // If no mail client is configured, open Gmail compose.
-              window.open(gmail, '_blank', 'noopener');
-            }, 900);
-          } catch {
-            window.open(gmail, '_blank', 'noopener');
-          }
-          showToast('Opening email compose...', 'success', 2500);
+          window.location.href = gmail;
+          showToast('Opening Gmail compose...', 'success', 2500);
           return;
         }
         const btn = contactForm.querySelector('button[type="submit"]');
